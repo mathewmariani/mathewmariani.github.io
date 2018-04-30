@@ -4,6 +4,11 @@ highlighter: rouge
 permalink: pretty
 
 baseurl: ""
+
+gems:
+  - kramdown
+  - rouge
+
 exclude:
   - "node_modules"
   - "gulpfile.js"
@@ -17,7 +22,7 @@ meta:
   generator: "Jekyll"
   type: "website"
   url: "http://mathewmariani.com/"
-  image: ""
+  image: "assets/img/mariani_mat.jpg"
   keywords: "mathew mariani"
 
 
