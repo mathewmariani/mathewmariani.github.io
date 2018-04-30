@@ -26,16 +26,16 @@ explorations:
 extensions:
   - name: Squirrel Language Highlighting
     img:
-    description: Add syntax highlighting and snippets to Squirrel files in Atom.
+    description: Adds syntax highlighting and snippets to Squirrel files in Atom.
     url: https://atom.io/packages/squirrel-language
     date: August 21, 2017
 
 graphics:
   - name: Sprite Batching
     img: opengl-spritebatch.gif
-    description: "Sprite batching with OpenGl 3.0."
+    description: "Sprite batching implemented using C/C++ and OpenGl 3.0."
     url:
-    date: April 29, 2017
+    date: February 18, 2017
 
   - name: Flocking
     img: coffee-flocking.gif
