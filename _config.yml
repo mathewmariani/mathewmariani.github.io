@@ -22,7 +22,7 @@ meta:
   generator: "Jekyll"
   type: "website"
   url: "http://mathewmariani.com/"
-  image: "assets/img/mariani_mat.jpg"
+  image: "http://mathewmariani.com/assets/img/mariani_mat.jpg"
   keywords: "mathew mariani"
 
 
