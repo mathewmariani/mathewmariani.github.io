@@ -1,0 +1,29 @@
+<!-- NOTE: 'itr' is externally defined -->
+
+<div class="card mb-3">
+
+	<!-- header -->
+	<div class="card-header bg-white arrow_box">
+		<p class="card-text">
+			<strong><a href="{{ itr.url }}">{{ itr.name }}</a></strong>
+		</p>
+	</div>
+
+	<!-- preview image -->
+	<div class="card-body">
+		<a href="{{ itr.url }}">
+		{% if itr.img == null %}
+			<img class="card-img" data-src="holder.js/100px250?theme=sky&text={{ itr.name }}" alt="Card image cap">
+		{% else %}
+			<img class="card-img" src="assets/img/{{ itr.img }}" alt="Card image cap">
+		{% endif %}
+		</a>
+	</div>
+
+	<!-- footer -->
+	<div class="card-footer">
+		<p class="card-text">{{ itr.description }}</p>
+		<p class="card-text"><small class="text-muted"><i class="far fa-clock"></i> {{ itr.date }}</small></p>
+	</div>
+
+</div>

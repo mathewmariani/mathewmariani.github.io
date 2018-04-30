@@ -1,0 +1,57 @@
+explorations:
+  - name: MARIE Simulator
+    img:
+    description: An assembly languague simulator written in Javascript with AngularJS.
+    url: http://mathewmariani.com/marie-simulator/
+    date: February 13, 2017
+
+  - name: Java Examples
+    img:
+    description: A collection of programming examples used for Cegep tutoring.
+    url: https://github.com/mathewmariani/JavaExamples
+    date: November 30, 2016
+
+  # - name: Tensy
+  #   img:
+  #   description: A Templated Entity System for C++.
+  #   url: https://github.com/mathewmariani/tensy
+  #   date: July 21, 2016
+
+  - name: Boids
+    img:
+    description: A small exploration in coffeescript and flocking.
+    url: http://mathewmariani.com/coffee-boids
+    date: September 17, 2015
+
+extensions:
+  - name: Squirrel Language Highlighting
+    img:
+    description: Add syntax highlighting and snippets to Squirrel files in Atom.
+    url: https://atom.io/packages/squirrel-language
+    date: August 21, 2017
+
+graphics:
+  - name: Sprite Batching
+    img: opengl-spritebatch.gif
+    description: "Sprite batching with OpenGl 3.0."
+    url:
+    date: April 29, 2017
+
+  - name: Flocking
+    img: coffee-flocking.gif
+    description: "CoffeeScript visualization of a flocking algorithm."
+    url:
+    date: September 17, 2015
+
+# games:
+#   - name: Lorem Ipsum
+#     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#     date: September 17, 2015
+#
+#   - name: Lorem Ipsum
+#     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#     date: September 17, 2015
+#
+#   - name: Lorem Ipsum
+#     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#     date: September 17, 2015

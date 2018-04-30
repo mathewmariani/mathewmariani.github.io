@@ -1,0 +1,49 @@
+markdown: kramdown
+highlighter: rouge
+
+permalink: pretty
+
+baseurl: ""
+exclude:
+  - "node_modules"
+  - "gulpfile.js"
+  - "package.json"
+
+# metadata
+meta:
+  author: "Mathew Mariani"
+  title: "Mathew Mariani"
+  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  generator: "Jekyll"
+  type: "website"
+  url: "http://mathewmariani.com/"
+  image: ""
+  keywords: "mathew mariani"
+
+
+# info
+info:
+  name: Mathew Mariani
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  location: Montreal, Canada
+
+social:
+  github: https://github.com/mathewmariani
+  twitter: https://twitter.com/mattymariani
+  email: mailto:mat.mariani@hotmail.com
+
+games:
+  name: Games
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+programming:
+  name: Programming
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+graphics:
+  name: Graphics
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+extensions:
+  name: Extensions
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

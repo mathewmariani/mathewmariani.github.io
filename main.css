@@ -1,0 +1,138 @@
+/* main.css */
+body {
+	font-family: 'Lato', arial, sans-serif;
+}
+
+/* flex */
+.flex-auto {
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+/* blog */
+.blog-header {
+	line-height: 1;
+}
+
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title { font-size: 3.5rem; }
+}
+
+/* footer */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', arial, sans-serif; }
+
+/* cards */
+.card-body { overflow: hidden; padding:0px!important; }
+.card-body:hover img { opacity: 0.25; transform: scale(1.2, 1.2); }
+.card-img { border-radius: 0px; }
+.h-250 { height: 250px; }
+
+@media (min-width: 768px) {
+	.h-md-250 { height: 250px; }
+}
+
+/* info */
+/* .info { margin-top: 0!important; } */
+
+main .info:first-child { margin-top: 0!important; }
+
+/* social */
+.social a { color: white; }
+.social .github:hover { color: #040204; }
+.social .twitter:hover { color: #55ACEE; }
+.social .email:hover { color: #DD4B39; }
+
+/* font-awesome */
+.fa-twitter, .fa-twitter-square { /* ... */ }
+.fa-gihub, .fa-github-square, .fa-github-alt { /* ... */ }
+.fa-youtube, .fa-youtube-play, .fa-youtube-square { /* ... */ }
+.fa-tumblr, .fa-tumblr-square { /* ... */ }
+.fa-flickr { /* ... */ }
+.fa-linkedin, .fa-linkedin-square { /* ... */ }
+.fa-instagram { /* ... */ }
+
+/* heart */
+.fa-heart { color: #ee5253; }
+.fa-map-marker { color: #ff6b6b; }
+
+/* bg color */
+.bg-jigglypuff { background-color: #ff9ff3; }
+.bg-lotuspink { background-color: #f368e0; }
+.bg-casandora { background-color: #feca57; }
+.bg-dragonskin { background-color: #ff9f43; }
+.bg-pastelred { background-color: #ff6b6b; }
+.bg-amour { background-color: #ee5253; }
+.bg-megaman { background-color: #48dbfb; }
+.bg-cyanite { background-color: #0abde3; }
+.bg-caribbeangreen { background-color: #1dd1a1; }
+.bg-mountainmeadow { background-color: #10ac84; }
+.bg-jadedust { background-color: #00d2d3; }
+.bg-aquavelvet { background-color: #01a3a4; }
+.bg-joustblue { background-color: #54a0ff; }
+.bg-bleudefrance { background-color: #2e86de; }
+.bg-nasupurple { background-color: #5f27cd; }
+.bg-bluebell { background-color: #341f97; }
+.bg-ballerina { background-color: #c8d6e5; }
+.bg-petrel { background-color: #8395a7; }
+.bg-fueltown { background-color: #576574; }
+.bg-imperial { background-color: #222f3e; }
+
+.arrow_box {
+	position: relative;
+	background: #fff;
+	/* border: 1px solid rgba(0,0,0,.125) */
+	z-index: 10;
+}
+
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+.arrow_box:before {
+	border-top-color: #fff;
+	border-width: 12px;
+	margin-left: -12px;
+}
