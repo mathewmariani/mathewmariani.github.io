@@ -1,3 +1,3 @@
 # mathewmariani.github.io
 
-https://travis-ci.org/mathewmariani/mathewmariani.github.io.svg?branch=master
+[![Build Status](https://travis-ci.org/mathewmariani/mathewmariani.github.io.svg?branch=master)](https://travis-ci.org/mathewmariani/mathewmariani.github.io)
