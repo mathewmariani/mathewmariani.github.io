@@ -39,9 +39,16 @@ graphics:
 
   - name: Flocking
     img: coffee-flocking.gif
-    description: "CoffeeScript visualization of a flocking algorithm."
+    description: "<a href=\"http://coffeescript.org/\">CoffeeScript</a> visualization of a flocking algorithm."
     url:
     date: September 17, 2015
+
+  - name: Procedural Islands
+    img: procedural-islands.gif
+    description: "Procedurally generated islands in <a href=\"https://unity3d.com/\">Unity3D</a>."
+    url:
+    date: ‎September ‎3, ‎2015
+
 
 # games:
 #   - name: Lorem Ipsum
