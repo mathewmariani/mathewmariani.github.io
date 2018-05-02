@@ -31,6 +31,12 @@ extensions:
     date: August 21, 2017
 
 graphics:
+  - name: Heat Distortion
+    img: heat-distortion-shader.gif
+    description: "A heat distortion shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>."
+    url:
+    date: May 2, 2018
+
   - name: Sprite Batching
     img: opengl-spritebatch.gif
     description: "Sprite batching implemented using C/C++ and OpenGl 3.0."
