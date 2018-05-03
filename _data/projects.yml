@@ -35,13 +35,19 @@ graphics:
     img: heat-distortion-shader.gif
     description: "A heat distortion shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>."
     url:
-    date: May 2, 2018
+    date: May 02, 2018
 
   - name: Sprite Batching
     img: opengl-spritebatch.gif
-    description: "Sprite batching implemented using C/C++ and OpenGl 3.0."
+    description: "Sprite batching implemented using C/C++ and OpenGL 3.0."
     url:
-    date: February 18, 2017
+    date: March 18, 2017
+
+  - name: Lathed Object 
+    img: lathe-object.gif
+    description: "OpenGL visualization of a <a href=\"https://en.wikipedia.org/wiki/Lathe_(graphics)\">Lathe Object</a>."
+    url:
+    date: January 29, 2017
 
   - name: Flocking
     img: coffee-flocking.gif
@@ -53,7 +59,7 @@ graphics:
     img: procedural-islands.gif
     description: "Procedurally generated islands in <a href=\"https://unity3d.com/\">Unity3D</a>."
     url:
-    date: ‎September ‎3, ‎2015
+    date: ‎September ‎03, ‎2015
 
 
 # games:
