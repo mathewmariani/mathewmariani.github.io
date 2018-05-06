@@ -1,4 +1,4 @@
-{% assign e = site.data.projects.posts %}
+{% assign e = site.posts %}
 {% if e != null %}
 
 <!-- banner -->
@@ -13,9 +13,12 @@
 <!-- cards -->
 <div class="card-columns">
 	{% for itr in e %}
-		{% include post.html %}
+		{% include card.html %}
 	{% endfor %}
 </div>
 <!-- end cards -->
 
 {% endif %}
+
+
+

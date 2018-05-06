@@ -1,11 +1,14 @@
 <!-- NOTE: 'itr' is externally defined -->
 
+<!-- card -->
 <div class="card mb-3">
 
 	<!-- header -->
 	<div class="card-header bg-white arrow_box">
 		<p class="card-text">
-			<strong><a href="{{ itr.url }}">{{ itr.name }}</a></strong>
+			<strong>
+				<a href="{{ itr.url }}">{{ itr.title }}</a>
+			</strong>
 		</p>
 	</div>
 
@@ -13,7 +16,7 @@
 	<div class="card-body">
 		<a href="{{ itr.url }}">
 		{% if itr.img == null %}
-			<img class="card-img" data-src="holder.js/355x250?auto=yes&theme=sky&text={{ itr.name }}" alt="Card image cap">
+			<img class="card-img" data-src="holder.js/355x250?auto=yes&theme=sky&text={{ itr.title }}" alt="Card image cap">
 		{% else %}
 			<img class="card-img" src="assets/img/{{ itr.img }}" alt="Card image cap">
 		{% endif %}
@@ -23,7 +26,8 @@
 	<!-- footer -->
 	<div class="card-footer">
 		<p class="card-text">{{ itr.description }}</p>
-		<p class="card-text"><small class="text-muted"><i class="far fa-clock"></i> {{ itr.date }}</small></p>
+		<p class="card-text"><small class="text-muted"><i class="far fa-clock"></i> {{ itr.date | date: '%B %d, %Y' }}</small></p>
 	</div>
 
+<!-- end card -->
 </div>

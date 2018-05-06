@@ -3,6 +3,14 @@ body {
 	font-family: 'Lato', arial, sans-serif;
 }
 
+.highlight {
+	border-radius: .25rem!important;
+}
+
+.highlight pre {
+  padding: 16px;
+}
+
 /* flex */
 .flex-auto {
 	-ms-flex: 0 0 auto;
