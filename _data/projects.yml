@@ -39,9 +39,15 @@ explorations:
 extensions:
   - title: Squirrel Language Highlighting
     img:
-    description: Adds syntax highlighting and snippets to Squirrel files in Atom.
+    description: Add syntax highlighting and snippets to Squirrel files in Atom.
     url: https://atom.io/packages/squirrel-language
     date: 2017-08-21
+
+  - title: MARIE Language Highlighting
+    img:
+    description: Add syntax highlighting for the MARIE Assembly Language.
+    url: https://atom.io/packages/language-marie
+    date: 2017-08-24
 
 graphics:
   - title: Pixel Lighting
