@@ -3,13 +3,13 @@ explorations:
     img:
     description: An assembly languague simulator written in Javascript with AngularJS.
     url: http://mathewmariani.com/marie-simulator/
-    date: February 13, 2017
+    date: "February 13, 2017"
 
   - name: Java Examples
     img:
     description: A collection of programming examples used for Cegep tutoring.
     url: https://github.com/mathewmariani/JavaExamples
-    date: November 30, 2016
+    date: "November 30, 2016"
 
   # - name: Tensy
   #   img:
@@ -21,45 +21,51 @@ explorations:
     img:
     description: A small exploration in coffeescript and flocking.
     url: http://mathewmariani.com/coffee-boids
-    date: September 17, 2015
+    date: "September 17, 2015"
 
 extensions:
   - name: Squirrel Language Highlighting
     img:
     description: Adds syntax highlighting and snippets to Squirrel files in Atom.
     url: https://atom.io/packages/squirrel-language
-    date: August 21, 2017
+    date: "August 21, 2017"
 
 graphics:
+  - name: Pixel Lighting
+    img: cel-shading-shader.gif
+    description: "A <a href=\"https://en.wikipedia.org/wiki/Cel shading\">Cel shading</a> shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>.<br>Based off a Love2D <a href=\"https://love2d.org/forums/viewtopic.php?f=5&t=11076\">thread</a>."
+    url:
+    date: "May 06, 2018"
+
   - name: Heat Distortion
     img: heat-distortion-shader.gif
     description: "A heat distortion shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>."
     url:
-    date: May 02, 2018
+    date: "May 02, 2018"
 
   - name: Sprite Batching
     img: opengl-spritebatch.gif
     description: "Sprite batching implemented using C/C++ and OpenGL 3.0."
     url:
-    date: March 18, 2017
+    date: "March 18, 2017"
 
   - name: Lathed Object 
     img: lathe-object.gif
     description: "OpenGL visualization of a <a href=\"https://en.wikipedia.org/wiki/Lathe_(graphics)\">Lathe Object</a>."
     url:
-    date: January 29, 2017
+    date: "January 29, 2017"
 
   - name: Flocking
     img: coffee-flocking.gif
     description: "<a href=\"http://coffeescript.org/\">CoffeeScript</a> visualization of a flocking algorithm."
     url:
-    date: September 17, 2015
+    date: "September 17, 2015"
 
   - name: Procedural Islands
     img: procedural-islands.gif
     description: "Procedurally generated islands in <a href=\"https://unity3d.com/\">Unity3D</a>."
     url:
-    date: ‎September ‎03, ‎2015
+    date: "September 03, 2015"
 
 
 # games:
