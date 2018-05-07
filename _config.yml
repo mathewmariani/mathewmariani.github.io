@@ -15,6 +15,7 @@ exclude:
   - "node_modules"
   - "gulpfile.js"
   - "package.json"
+  - "vendor"
 
 # metadata
 meta:
