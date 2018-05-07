@@ -41,7 +41,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('_scss/*.scss', ['sass']);
-  gulp.watch(['*.html', '*.css', '_data/*.yml', '_includes/*.html', '_layouts/*.html', '_posts/*.md'], ['jekyll-rebuild']);
+  gulp.watch(['_config.yml', '*.html', '*.css', '_data/*.yml', '_includes/*.html', '_layouts/*.html', '_posts/*.md'], ['jekyll-rebuild']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

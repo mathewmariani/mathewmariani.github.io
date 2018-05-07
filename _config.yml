@@ -1,20 +1,15 @@
 markdown: kramdown
 highlighter: rouge
 
+url: "https://mathewmariani.com"
+baseurl:
+
 plugins:
+  - kramdown
+  - rouge
   - jekyll-sitemap
 
 permalink: pretty
-
-baseurl: "https://mathewmariani.com/"
-
-collections:
-  posts:
-    output: true
-
-gems:
-  - kramdown
-  - rouge
 
 exclude:
   - "node_modules"
@@ -28,10 +23,9 @@ meta:
   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   generator: "Jekyll"
   type: "website"
-  url: "https://mathewmariani.com/"
+  url: "https://mathewmariani.com"
   image: "https://mathewmariani.com/assets/img/mariani_mat.jpg"
   keywords: "mathew mariani"
-
 
 # info
 info:
