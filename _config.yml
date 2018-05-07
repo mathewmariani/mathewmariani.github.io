@@ -1,6 +1,9 @@
 markdown: kramdown
 highlighter: rouge
 
+plugins:
+  - jekyll-sitemap
+
 permalink: pretty
 
 baseurl: "https://mathewmariani.com/"
