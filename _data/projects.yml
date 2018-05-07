@@ -68,6 +68,12 @@ graphics:
     url:
     date: 2017-03-18
 
+  - title: Terrain Generation
+    img: terrain-generation.gif
+    description: "Terrain generation in OpenGL using a <a href=\"https://en.wikipedia.org/wiki/Heightmap\">Heightmap</a>."
+    url:
+    date: 2017-02-12
+
   - title: Lathed Object
     img: lathe-object.gif
     description: "OpenGL visualization of a <a href=\"https://en.wikipedia.org/wiki/Lathe_(graphics)\">Lathe Object</a>."
