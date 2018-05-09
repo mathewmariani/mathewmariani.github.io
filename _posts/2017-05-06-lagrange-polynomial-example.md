@@ -66,6 +66,6 @@ $$ p\left(x\right) = e^{-1}\cdot \frac{x\left(x-1\right)}{\:2} - e^{0}\cdot \fra
 
 Now using our interpolating polynomial $$ p\left(x\right) $$ we can approximate the value of $$ f\left(x\right)=e^x $$ at the point $$ x = 0.5 $$.
 
-$$ p\left(0.5\right) = e^{-1}\cdot \frac{(0.5)\left((0.5)-1\right)}{\:2} - e^{0}\cdot \frac{((0.5)+1\left)((0.5)-1\right)}{\:1} + e^{1}\cdot \frac{(0.5)\left((0.5)+1\right)}{\:2} = 1.72337... $$
+$$ p\left(0.5\right) = e^{-1}\cdot \frac{(0.5)\left((0.5)-1\right)}{\:2} - e^{0}\cdot \frac{((0.5)+1\left)((0.5)-1\right)}{\:1} + e^{1}\cdot \frac{(0.5)\left((0.5)+1\right)}{\:2} = 1.72337\dots $$
 
-$$ e^{0.5} \approx 1.72337... $$
+$$ e^{0.5} \approx 1.72337\dots $$
