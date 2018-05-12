@@ -5,7 +5,7 @@ games:
     url: https://github.com/mathewmariani/bubble-shooter-unity/
     date: 2017-11-22
 
-explorations:
+programming:
   - title: MARIE Simulator
     img:
     description: An assembly languague simulator written in Javascript with AngularJS.

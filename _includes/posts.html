@@ -1,14 +1,24 @@
-<div class="card">
-	<!-- header -->
-	<div class="card-header bg-white">
-		<p class="card-text">
-			<strong><a href="{{ itr.url }}">{{ itr.title }}</a></strong>
-		</p>
-	</div>
+{% assign e = site.posts %}
+{% if e != null %}
 
-	<!-- footer -->
-	<div class="card-footer">
-		<p class="card-text">{{ itr.description }}</p>
-		<p class="card-text"><small class="text-muted"><i class="far fa-clock"></i> {{ itr.date }}</small></p>
+<!-- anchor -->
+<a name="posts"></a> 
+
+<!-- banner -->
+<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark info rounded">
+	<i class="mr-3 fas fa-pencil-alt fa-2x"></i>
+	<div>
+		<h5 class="mb-0 text-white">{{ site.blog.name }}</h5>
+		<small>{{ site.blog.desc }}</small>
 	</div>
 </div>
+
+<!-- cards -->
+<div class="card-columns">
+	{% for itr in e %}
+		{% include card.html %}
+	{% endfor %}
+</div>
+<!-- end cards -->
+
+{% endif %}
