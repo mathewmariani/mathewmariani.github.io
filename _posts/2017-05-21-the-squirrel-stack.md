@@ -2,6 +2,7 @@
 layout: post
 title: "The Squirrel Stack"
 description: "Understanding how to manipulate the Squirrel stack."
+date: 2017-05-21
 ---
 
 <!-- the stack -->
