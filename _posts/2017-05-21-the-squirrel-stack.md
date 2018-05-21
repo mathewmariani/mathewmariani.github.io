@@ -20,11 +20,11 @@ For instance to call a Squirrel function from C the  function and the arguments 
 </div>
 <div markdown="1" class="col-sm">
 
-| nidx | idx | stack         |
-|:----:|:---:| ------------- |
-| -1   | 3   | closure 			 |
-| -2   | 2   | string				 |
-| -3   | 1   | integer			 |
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -3   | closure 			 |
+| 2   | -2   | string				 |
+| 3   | -1   | integer			 |
 
 <small class="muted">In this case `sq_gettop(v)` would return 3.</small>
 
@@ -65,14 +65,14 @@ These functions push C values onto the stack.
 </div>
 <div markdown="1" class="col-sm">
 
-| nidx | idx | stack         |
-|:----:|:---:| ------------- |
-| -1   | 6   | string				 |
-| -2   | 5   | float				 |
-| -3   | 4   | integer			 |
-| -4   | 3   | bool					 |
-| -5   | 2   | userpointer	 |
-| -6   | 1   | null					 |
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -6   | string				 |
+| 2   | -5   | float				 |
+| 3   | -4   | integer			 |
+| 4   | -3   | bool					 |
+| 5   | -2   | userpointer	 |
+| 6   | -1   | null					 |
 
 <small class="muted">In this case `sq_gettop(v)` would return 6.</small>
 
@@ -99,12 +99,12 @@ sq_remove(v, -2);		// -1
 </div>
 <div markdown="1" class="col-sm">
 
-| nidx | idx | stack         |
-|:----:|:---:| ------------- |
-| -1   | 4   | string				 |
-| -2   | 3   | integer			 |
-| -3   | 2   | bool					 |
-| -4   | 1   | string				 |
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -4   | string				 |
+| 2   | -3   | integer			 |
+| 3   | -2   | bool					 |
+| 4   | -1   | string				 |
 
 <small class="muted">In this case `sq_gettop(v)` would return 4.</small>
 
@@ -137,11 +137,11 @@ and userdata.
 </div>
 <div markdown="1" class="col-sm">
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -3  | table					|
-| 2   | -2  | string				|
-| 3   | -1  | float					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -3   | table				 |
+| 2   | -2   | string				 |
+| 3   | -1   | float				 |
 
 </div>
 </div>
@@ -166,9 +166,9 @@ stack; if the slot does not exits it will be created.
 </div>
 <div markdown="1" class="col-sm">
 
-| idx | nidx | stack          |
-|:---:|:----:| -------------- |
-| 1   | -1   | table					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -1   | table				 |
 
 </div>
 </div>
@@ -196,15 +196,15 @@ delegation or metamethods.
 </div>
 <div markdown="1" class="col-sm">
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -2  | table					|
-| 2   | -1  | string				|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -2   | table				 |
+| 2   | -1   | string				 |
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -2  | table					|
-| 2   | -1  | float					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -2   | table				 |
+| 2   | -1   | float				 |
 
 <small>`sq_get(v, -2);` has been called on the table.</small>
 
@@ -239,15 +239,15 @@ Classes and Tables are associative containers implemented as [k, v] pairs called
 </div>
 <div markdown="1" class="col-sm">
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -3  | table					|
-| 2   | -2  | string				|
-| 3   | -1  | table					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -3   | table				 |
+| 2   | -2   | string				 |
+| 3   | -1   | table				 |
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -1  | table					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -1   | table				 |
 
 <small>`sq_newslot(v, -3, false)` has been called on the table.</small>
 
@@ -284,19 +284,19 @@ sq_newslot(v, -3, false) 	// -2
 </div>
 <div markdown="1" class="col-sm">
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -5  | table					|
-| 2   | -4  | string				|
-| 3   | -3  | class					|
-| 4   | -2  | string				|
-| 5   | -1  | closure				|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -5  | table					 |
+| 2   | -4  | string				 |
+| 3   | -3  | class					 |
+| 4   | -2  | string				 |
+| 5   | -1  | closure				 |
 
 <small>`sq_newslot(v, -3, false)` has not yet been called on the class.</small>
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -1  | table					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -1   | table				 |
 
 <small>`sq_newslot(v, -3, false)` has been called on the table.</small>
 
@@ -339,18 +339,18 @@ sq_newslot(v, -3, false) 	// -2
 </div>
 <div markdown="1" class="col-sm">
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -4  | table					|
-| 2   | -3  | string				|
-| 3   | -2  | array					|
-| 4   | -1  | integer				|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -4   | table				 |
+| 2   | -3   | string				 |
+| 3   | -2   | array				 |
+| 4   | -1   | integer			 |
 
 <small>`sq_arrayappend(v, -2)` has not yet been called on the array.</small>
 
-| idx | idx | stack         |
-|:---:|:---:| ------------- |
-| 1   | -1  | table					|
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -1   | table				 |
 
 <small>`sq_newslot(v, -3, false)` has been called on the table.</small>
 
