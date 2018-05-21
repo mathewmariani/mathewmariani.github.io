@@ -121,10 +121,10 @@ sq_remove(v, -2);		// -1
 <div markdown="1" class="row">
 <div markdown="1" class="col-sm">
 
-```c
+```cpp
 sq_pushroottable(v);		// +1
-sq_pushstring(v, "PI", -1);	// +1
-sq_pushfloat(v, 3.1415) 	// +1
+sq_pushstring(v, "pi", -1);	// +1
+sq_pushfloat(v, 3.1415); 	// +1
 ```
 
 
@@ -149,10 +149,10 @@ and userdata.
 <div markdown="1" class="row">
 <div markdown="1" class="col-sm">
 
-```c
+```cpp
 sq_pushroottable(v);		// +1
-sq_pushstring(v, "PI", -1);	// +1
-sq_pushfloat(v, 3.1415) 	// +1
+sq_pushstring(v, "pi", -1);	// +1
+sq_pushfloat(v, 3.1415); 	// +1
 sq_newslot(v, -3, false);	// -2
 ```
 
@@ -176,9 +176,9 @@ stack; if the slot does not exits it will be created.
 <div markdown="1" class="row">
 <div markdown="1" class="col-sm">
 
-```c
+```cpp
 sq_pushroottable(v);		// +1
-sq_pushstring(v, "PI", -1);	// +1
+sq_pushstring(v, "pi", -1);	// +1
 sq_get(v, -2);			// +0
 ```
 
@@ -219,7 +219,7 @@ delegation or metamethods.
 <div markdown="1" class="row">
 <div markdown="1" class="col-sm">
 
-```c
+```cpp
 sq_pushroottable(v);		// +1
 sq_pushstring(v, "table", -1);	// +1
 sq_newtable(v);			// +1
@@ -313,7 +313,7 @@ sq_newslot(v, -3, false) 	// -2
 <div markdown="1" class="row">
 <div markdown="1" class="col-sm">
 
-```c
+```cpp
 sq_pushroottable(v);		// +1
 sq_pushstring(v, "array", -1);	// +1
 sq_newarray(v, 3);		// +1
