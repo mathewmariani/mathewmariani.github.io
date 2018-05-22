@@ -13,7 +13,7 @@ date: 2017-05-21
 
 [Squirrel](http://www.squirrel-lang.org/) exchanges values with the virtual machine through a stack.
 
-Nearly all functions in the API use the stack. Squirrel manipulates this stack arbitrarily using an index to refer to any element in the stack.
+Nearly all functions in the API use the stack, Squirrel manipulates this stack arbitrarily using an index to refer to any element in the stack.
 
 For instance to call a Squirrel function from C the  function and the arguments must be pushed onto the stack .
 
@@ -22,7 +22,7 @@ For instance to call a Squirrel function from C the  function and the arguments 
 
 | idx | nidx | stack         |
 |:---:|:----:| ------------- |
-| 1   | -3   | closure 			 |
+| 1   | -3   | function			 |
 | 2   | -2   | string				 |
 | 3   | -1   | integer			 |
 
@@ -170,6 +170,8 @@ stack; if the slot does not exits it will be created.
 |:---:|:----:| ------------- |
 | 1   | -1   | table				 |
 
+<small>`sq_newslot(v, -3, false)` has been called on the table; using idx [-2, -1] as a [k, v] pair.</small>
+
 </div>
 </div>
 
@@ -206,7 +208,7 @@ delegation or metamethods.
 | 1   | -2   | table				 |
 | 2   | -1   | float				 |
 
-<small>`sq_get(v, -2);` has been called on the table.</small>
+<small>`sq_get(v, -2);` has been called on the table; using idx [-1] as a key.</small>
 
 </div>
 </div>
@@ -249,7 +251,7 @@ Classes and Tables are associative containers implemented as [k, v] pairs called
 |:---:|:----:| ------------- |
 | 1   | -1   | table				 |
 
-<small>`sq_newslot(v, -3, false)` has been called on the table.</small>
+<small>`sq_newslot(v, -3, false)` has been called on the table; using idx [-2, -1] as a [k, v] pair.</small>
 
 </div>
 </div>
@@ -286,11 +288,11 @@ sq_newslot(v, -3, false) 	// -2
 
 | idx | nidx | stack         |
 |:---:|:----:| ------------- |
-| 1   | -5  | table					 |
-| 2   | -4  | string				 |
-| 3   | -3  | class					 |
-| 4   | -2  | string				 |
-| 5   | -1  | closure				 |
+| 1   | -5   | table				 |
+| 2   | -4   | string				 |
+| 3   | -3   | class				 |
+| 4   | -2   | string				 |
+| 5   | -1   | function			 |
 
 <small>`sq_newslot(v, -3, false)` has not yet been called on the class.</small>
 
@@ -332,6 +334,8 @@ sq_newslot(v, -3, false) 	// -2
 
 
 <!-- description -->
+Arrays, unlike Classes and Tables, are simple sequence of objects.
+
 `sq_newarray(SQVM *v, int size)` creates a new array of size `size` and pushes onto the stack.
 
 `sq_arrayappend(SQVM *v, int idx)` pops a value from the stack and appends it to the back of the array at the position `idx` in the stack.
@@ -360,6 +364,55 @@ sq_newslot(v, -3, false) 	// -2
 
 
 <!-- end `arrays` -->
+
+<!-- begin `functions` -->
+### Functions
+
+<div markdown="1" class="row">
+<div markdown="1" class="col-sm">
+
+
+```cpp
+sq_pushroottable(v);		// +1
+sq_pushstring(v, "fib", -1);	// +1
+sq_get(v, -2);			// +0
+sq_pushinteger(v, 5);		// +1
+sq_pushinteger(v, 8);		// +1
+sq_call(v, -3, true, false);	// -2
+```
+
+
+<!-- description -->
+Functions are similar to those found in most programming languages, and can be stored in table slots, local variables, arrays and passed as parameters.
+
+`sq_call(SQVM *v, int parans, bool retval, bool err)` calls a closure or a native closure. This function will leave a return value on the stack if `retval` is true.
+
+</div>
+<div markdown="1" class="col-sm">
+
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -4   | table				 |
+| 2   | -3   | function			 |
+| 3   | -2   | integer			 |
+| 4   | -1   | integer			 |
+
+<small>`sq_get(v, -2)` pushed a function "fib" from the roottable onto the stack.</small>
+
+| idx | nidx | stack         |
+|:---:|:----:| ------------- |
+| 1   | -3   | table				 |
+| 2   | -2   | function			 |
+| 3   | -1   | integer			 |
+
+<small>`sq_call(v, -3, true, false)` left a return value on the stack.</small>
+
+
+</div>
+</div>
+
+
+<!-- end `functions` -->
 
 <!-- dirty hack -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
