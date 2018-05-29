@@ -2,7 +2,7 @@
 layout: post
 title: "Midpoint Integration Example"
 description: "Using Taylor expansions to derive the leading error term."
-date: 2017-05-08
+date: 2018-05-08
 ---
 
 <!-- implements MathJax -->

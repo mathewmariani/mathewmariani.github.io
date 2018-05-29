@@ -2,7 +2,7 @@
 layout: post
 title: "Lagrange Polynomial Example"
 description: "Using the Lagrange polynomial to interpolate a function at given points."
-date: 2017-05-06
+date: 2018-05-06
 ---
 
 <!-- implements MathJax -->
