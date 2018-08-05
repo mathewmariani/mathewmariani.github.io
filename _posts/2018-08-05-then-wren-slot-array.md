@@ -1,5 +1,6 @@
 ---
 layout: post
+title: "The Wren Slot Array"
 description: "Understanding how to manipulate the Wren slot array."
 date: 2018-08-05
 ---
