@@ -112,8 +112,8 @@ Since Wren is a dynamically type language you want to ensure you're accessing th
 |:----:| ------------- |
 | 0    | true          |
 | 1    | 3.14159       |
-| 2    | "hi there"    |
-| 3    | null          |
+| 2    | null          |
+| 3    | "hi there"    |
 
 <small class="muted">In this case `wrenGetSlotType(vm, 3)` would return `WREN_TYPE_NULL`.</small>
 
