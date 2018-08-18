@@ -21,7 +21,8 @@ exclude:
 meta:
   author: "Mathew Mariani"
   title: "Mathew Mariani"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  desc: "I enjoy programming end-user software; working on solving new problems, and learning new skills.\nWith a passion for graphics programming and embedded languages."
+  # desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   generator: "Jekyll"
   type: "website"
   url: "https://mathewmariani.com"
@@ -31,7 +32,7 @@ meta:
 # info
 info:
   name: "Mathew Mariani"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  desc: "I enjoy programming end-user software; working on solving new problems, and learning new skills.\nWith a passion for graphics programming and embedded languages."
   location: "Montreal, Canada"
 
 social:
@@ -41,20 +42,20 @@ social:
 
 games:
   name: "Games"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  desc: "Some games I've made using technologies such as Love2D, and Unity3D."
 
 programming:
   name: "Programming"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  desc: "Small general stuff I've programmed over time."
 
 graphics:
   name: "Graphics"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  desc: "Some graphical programming using Love2d, OpenGL, and Unity3D."
 
 extensions:
   name: "Extensions"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  desc: "Packages for the hackable text editor Atom."
 
 blog:
   name: "Posts"
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  desc: "Small posts I've written to help expand my understanding for topics."
