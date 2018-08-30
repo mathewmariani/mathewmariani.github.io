@@ -64,7 +64,7 @@ The CPU contains 7 Registers, the [Accumulator](https://en.wikipedia.org/wiki/Ac
 - `PC` Program Control, a 12-bit register that holds the address of the next program instruction to be executed.
 - `MAR` a 12-bit register that holds a memory address of an instruction (the operand of an instruction).
 - `IN` an 8-bit register that holds data read from an input device.
-- `OUT` an 8-bit register that holds data that is ready for the output device
+- `OUT` an 8-bit register that holds data that is ready for the output device.
 
 </div>
 </div>
@@ -93,7 +93,7 @@ service.execute = function() {
 
 <!-- right -->
 
-On each CPU cycle a new instruction the Instruction Pointer ([MAR](https://en.wikipedia.org/wiki/Program_counter)) is updated using the Program Counter. An instruction is then fetched from the Instruction Register ([IR](https://en.wikipedia.org/wiki/Instruction_register)) where the opcode and operand are decoded from the instruction, and executed by the cpu.
+On each CPU cycle the Instruction Pointer ([MAR](https://en.wikipedia.org/wiki/Program_counter)) is updated using the Program Counter ([PC](https://en.wikipedia.org/wiki/Program_counter)). An instruction is then fetched from the Instruction Register ([IR](https://en.wikipedia.org/wiki/Instruction_register)) where the opcode and operand are decoded from the instruction, and executed by the CPU.
 
 </div>
 </div>
