@@ -11,18 +11,21 @@ programming:
     description: A small Matrix object for use with OpenGL.
     url: https://mathewmariani.com/marie-simulator/
     date: 2017-03-06
+    tag: C/C++
 
   - title: MARIE Simulator
     img:
     description: An assembly languague simulator written in Javascript with AngularJS.
     url: https://mathewmariani.com/marie-simulator/
     date: 2017-02-13
+    tag: Javascript, AngularJS
 
   - title: Java Examples
     img:
     description: A collection of programming examples used for Cegep tutoring.
     url: https://github.com/mathewmariani/JavaExamples
     date: 2016-11-30
+    tag: Java
 
   # - title: Tensy
   #   img:
@@ -35,6 +38,7 @@ programming:
     description: A small exploration in coffeescript and flocking.
     url: https://mathewmariani.com/coffee-boids
     date: 2015-09-17
+    tag: JavaScript, Coffee
 
 extensions:
   - title: Squirrel Language Highlighting
@@ -42,12 +46,14 @@ extensions:
     description: Add syntax highlighting and snippets to Squirrel files in Atom.
     url: https://atom.io/packages/squirrel-language
     date: 2017-08-21
+    tag: Atom
 
   - title: MARIE Language Highlighting
     img:
     description: Add syntax highlighting for the MARIE Assembly Language.
     url: https://atom.io/packages/language-marie
     date: 2017-08-24
+    tag: Atom
 
 graphics:
   - title: Pixel Lighting
@@ -55,39 +61,46 @@ graphics:
     description: "A <a href=\"https://en.wikipedia.org/wiki/Cel shading\">Cel shading</a> shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>.<br>Based off a Love2D <a href=\"https://love2d.org/forums/viewtopic.php?f=5&t=11076\">thread</a>."
     url:
     date: 2018-05-06
+    tag: Lua
 
   - title: Heat Distortion
     img: heat-distortion-shader.gif
     description: "A heat distortion shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>."
     url:
     date: 2018-05-02
+    tag: Lua
 
   - title: Sprite Batching
     img: opengl-spritebatch.gif
     description: "Sprite batching implemented using C/C++ and OpenGL 3.0."
     url:
     date: 2017-03-18
+    tag: C/C++, OpenGl
 
   - title: Terrain Generation
     img: terrain-generation.gif
     description: "Terrain generation in OpenGL using a <a href=\"https://en.wikipedia.org/wiki/Heightmap\">Heightmap</a>."
     url:
     date: 2017-02-12
+    tag: C/C++, OpenGl
 
   - title: Lathed Object
     img: lathe-object.gif
     description: "OpenGL visualization of a <a href=\"https://en.wikipedia.org/wiki/Lathe_(graphics)\">Lathe Object</a>."
     url:
     date: 2017-01-29
+    tag: C/C++, OpenGl
 
   - title: Flocking
     img: coffee-flocking.gif
     description: "<a href=\"http://coffeescript.org/\">CoffeeScript</a> visualization of a flocking algorithm."
     url:
     date: 2015-09-17
+    tag: JavaScript, Coffee
 
   - title: Procedural Islands
     img: procedural-islands.gif
     description: "Procedurally generated islands in <a href=\"https://unity3d.com/\">Unity3D</a>."
     url:
     date: 2015-09-03
+    tag: Unity3D

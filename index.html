@@ -3,40 +3,81 @@ layout: home
 ---
 
 <!-- bootstrap container -->
-<div class="container">
+<nav>
+	<div class="container">
+		<a href="{{ site.url }}" class="brand text-left">
+			Mathew Mariani
+		</a>
+		<div class="right text-right">
+			<a class="github" href="{{ site.social.github }}"><i class="mr-3 fab fa-github"></i></a>
+			<a class="twitter" href="{{ site.social.twitter }}"><i class="mr-3 fab fa-twitter"></i></a>
+			<a class="email" href="{{ site.social.email }}"><i class="mr-3 far fa-envelope"></i></a>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+
 
 	<!-- header -->
-	{% include title.html %}
+	<header>
+		<div class="container">
+			<p class="lead">{{ site.info.desc.who }}</p>
+			<p class="lead">{{ site.info.desc.what }}</p>
+			<!-- <p class="lead">{{ site.info.desc.where }}</p> -->
+		</div>
+	</header>
+
+	<div class="container">
 
 	<!-- main -->
 	<main>
 		{% include games.html %}
-		{% include programming.html %}
 		{% include graphics.html %}
+		{% include programming.html %}
 		{% include extensions.html %}
 		{% include posts.html %}
 	</main>
 
+
+	{% include footer.html %}
+
+</div>
 </div>
 
-{% include footer.html %}
+<style>
+.card {
+	border-radius: 2px !important;
+}
+.card-body > span {
+	display: block;
+}
+</style>
+
+<!-- <style>
+.card {
+	border-radius: 2px !important;
+}
+.card-footer {
+	background-color: #F8F9FA;
+}
+.post-index-item {
+  display: block;
+  overflow: hidden;
+  padding: 6px 20px;
+	border-top: solid 1px #d8dadc;
+}
+.post-index-item > .date {
+	display: inherit;
+	width: 100px;
+}
+.post-index-item > .article {
+	margin-right: 3px;
+}
+</style> -->
 
 <!-- faster page loading -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/holder.min.js"></script>
-
-<!--
-<script src="assets/js/masonry.min.js"></script>
-<script>
-$('.masonry-grid').masonry({
-  // options
-	itemSelector: '.masonry-block',
-	columnWidth: '.masonry-block',
-	gutter: ".gutter-sizer",
-  percentPosition: true,
-  transitionDuration: 0
-});
-</script>
--->

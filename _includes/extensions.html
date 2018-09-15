@@ -2,23 +2,22 @@
 {% if e != null %}
 
 <!-- anchor -->
-<a name="extensions"></a> 
+<a name="extensions"></a>
 
-<!-- banner -->
-<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark info rounded">
-	<i class="mr-3 fas fa-puzzle-piece fa-2x"></i>
-	<div>
-		<h5 class="mb-0 text-white">{{ site.extensions.name }}</h5>
-		<small>{{ site.extensions.desc }}</small>
+<!-- section -->
+<section>
+	<!--  -->
+	<h3>{{ site.extensions.name }}</h3>
+	<hr />
+
+	<!--  -->
+	<div class="body">
+		<ul>
+		{% for itr in e %}
+			{% include extensions-card.html %}
+		{% endfor %}
+		</ul>
 	</div>
-</div>
-
-<!-- cards -->
-<div class="card-columns">
-	{% for itr in e %}
-		{% include card.html %}
-	{% endfor %}
-</div>
-<!-- end cards -->
+</section>
 
 {% endif %}

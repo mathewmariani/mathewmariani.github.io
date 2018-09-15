@@ -7,34 +7,40 @@
 
 	<body>
 
-		<!-- bootstrap container -->
-		<div class="container">
-
-			<!-- header -->
-			{% include title.html %}
-
-			<!-- banner -->
-			<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark info rounded">
-				<i class="mr-3 fas fa-pencil-alt fa-2x"></i>
-				<div>
-					<h5 class="mb-0 text-white">{{ page.title }}</h5>
-					<small>{{ page.description }}</small>
+		<nav>
+			<div class="container">
+				<a href="{{ site.url }}" class="brand text-left">
+					Mathew Mariani
+				</a>
+				<div class="right text-right">
+					<a class="github" href="{{ site.social.github }}"><i class="mr-3 fab fa-github"></i></a>
+					<a class="twitter" href="{{ site.social.twitter }}"><i class="mr-3 fab fa-twitter"></i></a>
+					<a class="email" href="{{ site.social.email }}"><i class="mr-3 far fa-envelope"></i></a>
 				</div>
 			</div>
+		</nav>
+
+		<!-- bootstrap container -->
+		<div class="container-fluid">
+
+			<!-- header -->
+			<header>
+				<div class="container text-center">
+					<h1>{{ page.title }}</h1>
+					<small class="text-muted">{{ page.description }}</small>
+				</div>
+			</header>
+
+			<div class="container">
 
 			<!-- main -->
 			<main>
 			    {{ content }}
 			</main>
 
-			<div class="btn-toolbar mb-3" role="toolbar">
-				<a class="btn btn-dark btn-lg btn-block mb-3" href="{{ site.url }}" role="button">
-					<i class="fas fa-arrow-alt-circle-left"></i> Back
-				</a>
-			</div>
+			{% include footer.html %}
 		</div>
-
-		{% include footer.html %}
+		</div>
 
 	</body>
 

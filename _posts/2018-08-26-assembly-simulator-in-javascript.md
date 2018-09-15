@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "Assembly Simulator in JavaScript"
+title: "ASM Simulator in JavaScript"
 description: "Understanding how the MARIE Simulator works."
 date: 2018-08-26
+tag: JavaScript
 ---
 
+<section markdown="1">
 <!-- instruction format -->
 ### Instruction Format
+---
+<section markdown="1" class="section-column">
+<div markdown="1" class="body">
 
-<div markdown="1" class="row">
-<div markdown="1" class="col-sm">
-
-<!-- left -->
 ```javascript
 // [0000]   [0000 0000 0000]
 // [opcode] [operands]
@@ -21,9 +22,7 @@ var operand = (this.ir & 0xFFF);
 ```
 
 </div>
-<div markdown="1" class="col-sm">
-
-<!-- right -->
+<div markdown="1" class="body">
 
 Instructions are 16 bits in size; 4 bits for the opcode, 12 bits for the address.
 An instruction is encoded with both the opcode and its operands.
@@ -31,15 +30,15 @@ An instruction is encoded with both the opcode and its operands.
 To decode an instruction the bitwise operators, [SHIFT](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Right_shift) and [AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND), are used to obtain both the opcode and operand.
 
 </div>
-</div>
+</section>
+</section>
 
+<section markdown="1">
 <!-- the control processing unit -->
 ### The CPU
-
-<div markdown="1" class="row">
-<div markdown="1" class="col-sm">
-
-<!-- left -->
+---
+<section markdown="1" class="section-column">
+<div markdown="1" class="body">
 
 ```javascript
 this.ac = 0x0;
@@ -52,9 +51,7 @@ this.out = 0x0;
 ```
 
 </div>
-<div markdown="1" class="col-sm">
-
-<!-- right -->
+<div markdown="1" class="body">
 
 The CPU contains 7 Registers, the [Accumulator](https://en.wikipedia.org/wiki/Accumulator_(computing)) being the only [general purpose](https://en.wikipedia.org/wiki/Processor_register#GPR]) register.
 
@@ -67,12 +64,10 @@ The CPU contains 7 Registers, the [Accumulator](https://en.wikipedia.org/wiki/Ac
 - `OUT` an 8-bit register that holds data that is ready for the output device.
 
 </div>
-</div>
+</section>
+<section markdown="1" class="section-column">
+<div markdown="1" class="body">
 
-<div markdown="1" class="row">
-<div markdown="1" class="col-sm">
-
-<!-- left -->
 ```javascript
 // cpu fetch
 service.fetch = function() {
@@ -89,20 +84,20 @@ service.execute = function() {
 ```
 
 </div>
-<div markdown="1" class="col-sm">
-
-<!-- right -->
+<div markdown="1" class="body">
 
 On each CPU cycle the Instruction Pointer ([MAR](https://en.wikipedia.org/wiki/Program_counter)) is updated using the Program Counter ([PC](https://en.wikipedia.org/wiki/Program_counter)). An instruction is then fetched from the Instruction Register ([IR](https://en.wikipedia.org/wiki/Instruction_register)) where the opcode and operand are decoded from the instruction, and executed by the CPU.
 
 </div>
-</div>
+</section>
+</section>
 
+<section markdown="1">
 <!-- the memory -->
 ### The Memory
-
-<div markdown="1" class="row">
-<div markdown="1" class="col-sm">
+---
+<section markdown="1" class="section-column">
+<div markdown="1" class="body">
 
 <!-- left -->
 ```javascript
@@ -127,7 +122,7 @@ service.write = function (address, value) {
 ```
 
 </div>
-<div markdown="1" class="col-sm">
+<div markdown="1" class="body">
 
 <!-- right -->
 A simple array is used to represent the machines memory; A size of 4096 is used since operands are only 12 bytes in size.
@@ -139,11 +134,5 @@ The memory service contains three functions.
 Both functions will throw an error if the given address isn't within the bounds of the address space (0x0, 0x1000).
 
 </div>
-</div>
-
-<!-- dirty hack -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-$("table").addClass("table table-bordered");
-</script>
+</section>
+</section>

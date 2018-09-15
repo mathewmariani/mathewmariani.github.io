@@ -21,8 +21,7 @@ exclude:
 meta:
   author: "Mathew Mariani"
   title: "Mathew Mariani"
-  desc: "I enjoy programming end-user software; working on solving new problems, and learning new skills.\nWith a passion for graphics programming and embedded languages."
-  # desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  desc: "I am a software developer who enjoys programming end-user software; working on solving new problems, and learning new skills."
   generator: "Jekyll"
   type: "website"
   url: "https://mathewmariani.com"
@@ -32,8 +31,11 @@ meta:
 # info
 info:
   name: "Mathew Mariani"
-  desc: "I enjoy programming end-user software; working on solving new problems, and learning new skills.\nWith a passion for graphics programming and embedded languages."
   location: "Montreal, Canada"
+  desc:
+    who: "I am a software developer who enjoys programming end-user software; working on solving new problems, and learning new skills."
+    what: "I am an open-source contributor and I like making things that help people with their work. I have authored <a href=\"https://mathewmariani.com/marie-simulator/\">MARIE Simulator</a> as a teaching tool for studens."
+    where: "where"
 
 social:
   github: https://github.com/mathewmariani

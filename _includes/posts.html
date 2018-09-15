@@ -2,23 +2,22 @@
 {% if e != null %}
 
 <!-- anchor -->
-<a name="posts"></a> 
+<a name="posts"></a>
 
-<!-- banner -->
-<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark info rounded">
-	<i class="mr-3 fas fa-pencil-alt fa-2x"></i>
-	<div>
-		<h5 class="mb-0 text-white">{{ site.blog.name }}</h5>
-		<small>{{ site.blog.desc }}</small>
+<!-- section -->
+<section class="py-3">
+	<!--  -->
+	<h3>{{ site.blog.name }}</h3>
+	<hr />
+
+	<!--  -->
+	<div class="body">
+		<ul>
+		{% for itr in e %}
+			{% include post-card.html %}
+		{% endfor %}
+		</ul>
 	</div>
-</div>
-
-<!-- cards -->
-<div class="card-columns">
-	{% for itr in e %}
-		{% include card.html %}
-	{% endfor %}
-</div>
-<!-- end cards -->
+</section>
 
 {% endif %}
