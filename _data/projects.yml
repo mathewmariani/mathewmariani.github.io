@@ -63,6 +63,13 @@ extensions:
     tag: Atom
 
 graphics:
+  - title: Crowd Constraints
+    img: crowd-constraints.gif
+    description: "Crowd simulation implemented in <a href=\"https://love2d.org\">Love2D</a>."
+    url: 
+    date: 2019-04-22
+    tag: Lua
+
   - title: MÖAN
     img: moan.gif
     description: "A dialog box system implemented in <a href=\"https://love2d.org\">Love2D</a>."
