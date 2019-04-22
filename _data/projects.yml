@@ -6,6 +6,13 @@ games:
     date: 2017-11-22
 
 programming:
+  - title: Möan
+    img:
+    description: A fast, lightweight dialogue library for Löve2D.
+    url: https://github.com/mathewmariani/moan
+    date: 2019-04-22
+    tag: Lua
+
   - title: Matrix4
     img:
     description: A small Matrix object for use with OpenGL.
@@ -56,6 +63,13 @@ extensions:
     tag: Atom
 
 graphics:
+  - title: MÖAN
+    img: moan.gif
+    description: "A dialog box system implemented in <a href=\"https://love2d.org\">Love2D</a>."
+    url:
+    date: 2019-04-22
+    tag: Lua
+
   - title: Pixel Lighting
     img: cel-shading-shader.gif
     description: "A <a href=\"https://en.wikipedia.org/wiki/Cel shading\">Cel shading</a> shader implemented in <a href=\"https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language\">GLSL</a>.<br>Based off a Love2D <a href=\"https://love2d.org/forums/viewtopic.php?f=5&t=11076\">thread</a>."
