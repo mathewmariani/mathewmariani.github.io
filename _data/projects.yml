@@ -6,6 +6,13 @@ games:
     date: 2017-11-22
 
 programming:
+  - title: Natural Language Processing
+    img:
+    description: Automatic language identification using n-gram based models.
+    url: https://mathewmariani.com/ngram-nlp/
+    date: 2019-04-27
+    tag: JavaScript, VueJS
+
   - title: Möan
     img:
     description: A fast, lightweight dialogue library for Löve2D.
@@ -25,7 +32,7 @@ programming:
     description: An assembly languague simulator written in Javascript with AngularJS.
     url: https://mathewmariani.com/marie-simulator/
     date: 2017-02-13
-    tag: Javascript, AngularJS
+    tag: JavaScript, VueJS
 
   - title: Java Examples
     img:
@@ -42,10 +49,10 @@ programming:
 
   - title: Boids
     img:
-    description: A small exploration in coffeescript and flocking.
+    description: A small exploration in <a href=\"https://coffeescript.org/\">CoffeeScript</a> and flocking.
     url: https://mathewmariani.com/coffee-boids
     date: 2015-09-17
-    tag: JavaScript, Coffee
+    tag: CoffeeScript
 
 extensions:
   - title: Squirrel Language Highlighting
