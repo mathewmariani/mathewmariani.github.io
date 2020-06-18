@@ -70,6 +70,13 @@ extensions:
     tag: Atom
 
 graphics:
+  - title: Pathfinding
+    img: pathfinding.gif
+    description: "BFS Pathfinding with multiple agents implemented in <a href=\"https://love2d.org\">Love2D</a>."
+    url: 
+    date: 2020-06-17
+    tag: Lua
+
   - title: Dungeon Generation
     img: procgen-dungeon.gif
     description: "Procedural Dungeon Generation implemented in <a href=\"https://love2d.org\">Love2D</a>."
