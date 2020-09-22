@@ -1,23 +1,19 @@
-{% assign e = site.data.projects.programming %}
+{% assign e = site.data.programming %}
 {% if e != null %}
 
-<!-- anchor -->
-<a name="programming"></a>
-
-<!-- section -->
-<section>
-	<!--  -->
-	<h3>{{ site.programming.name }}</h3>
-	<hr />
-
-	<!--  -->
-	<div class="body">
-		<ul>
+<article class="nature">
+	<h1>Programming</h1>	
+	<div class="highlight"></div>
+	<div class="posts">
 		{% for itr in e %}
-			{% include programming-card.html %}
+		<div class="post_item">
+			<span class="post_date">{{ itr.date | date: "%Y.%m.%d" }}</span>
+			<span class="post_title">
+				<a href="{{ itr.url }}">{{ itr.title }}</a>
+			</span>
+		</div>
 		{% endfor %}
-		</ul>
 	</div>
-</section>
+</article>
 
 {% endif %}

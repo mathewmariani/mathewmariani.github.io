@@ -1,7 +1,5 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -19,7 +17,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
 });
 
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['jekyll-build'], function() {
   browserSync({
     server: {
       baseDir: '_site'
@@ -27,21 +25,17 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
   });
 });
 
-gulp.task('sass', function () {
-	return gulp.src('_scss/main.scss')
-	  .pipe(sass({
-	    includePaths: ['scss'],
-	    onError: browserSync.notify
-	  }))
-	  .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-	  .pipe(gulp.dest('_site/css'))
-	  .pipe(browserSync.reload({stream:true}))
-	  .pipe(gulp.dest('css'));
-});
-
 gulp.task('watch', function () {
-	gulp.watch('_scss/*.scss', ['sass']);
-  gulp.watch(['_config.yml', '*.html', '*.css', '_data/*.yml', '_includes/*.html', '_layouts/*.html', '_posts/*.md'], ['jekyll-rebuild']);
+  const list = [
+    '*.css',
+    '*.html',
+    '_config.yml',
+    '_data/*.yml',
+    '_includes/*.html',
+    '_layouts/*.html',
+    '_posts/*.md'
+  ];
+  gulp.watch(list, ['jekyll-rebuild']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

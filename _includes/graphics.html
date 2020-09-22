@@ -1,25 +1,16 @@
-{% assign e = site.data.projects.graphics %}
+{% assign e = site.data.graphics %}
 {% if e != null %}
 
-<!-- anchor -->
-<a name="graphics"></a>
-
-<!-- section -->
-<section>
-	<!-- banner -->
-	<h3>{{ site.graphics.name }}</h3>
-	<hr />
-
-	<!--
-	NOTE: https://stackoverflow.com/questions/29546550/flexbox-4-items-per-row
-	-->
-
-	<!--  -->
+<article class="nature">
+	<h1>Graphics</h1>	
+	<div class="highlight"></div>
 	<div class="masonry">
-		{% for itr in e %}
-			{% include graphics-card.html %}
-		{% endfor %}
+	{% for itr in e %}
+		<div class="masonry-brick">
+			<img src="../assets/img/{{ itr.img }}" alt="" />
+		</div>
+	{% endfor %}
 	</div>
-</section>
+</article>
 
 {% endif %}

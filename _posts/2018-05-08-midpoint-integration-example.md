@@ -15,21 +15,11 @@ https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-qu
 -->
 
 <!-- taylor series definition -->
-<section markdown="1">
-<div markdown="1" class="body">
-
 The Taylor series, as described below, is used to expand given functions in a method known as Taylor expansion.
 
 <!-- taylor series -->
 - $$ \tag{1} \sum _{n=0}^{\infty }\:\frac{f^{\left(n\right)}\left(a\right)}{n!}\left(x-a\right)^n $$
 - $$ \tag{2} f\left(a\right) + \frac{f'\left(a\right)}{1!}\left(x-a\right) + \frac{f''\left(a\right)}{2!}\left(x-a\right)^2 + \frac{f'''\left(a\right)}{3!}\left(x-a\right)^3 + \dots $$
-
-</div>
-</section>
-
-<!-- midpoint integration example problem -->
-<section markdown="1">
-<div markdown="1" class="body">
 
 <!-- example problem part a -->
 As an example, we will use Taylor expansion to derive an error formula for the interval $$ \left[-\frac{h}{2},\:\frac{h}{2}\right] $$ using the local Midpoint Rule described bellow.
@@ -52,13 +42,6 @@ Now we have our _leading error term_ __(1)__ and the _order of accuracy_ __(2)__
 <!-- order of accuracy -->
 - $$ \tag{2} \mathcal{O} \left(h^3\right) $$
 
-</div>
-</section>
-
-<!-- example problem part b -->
-<section markdown="1">
-<div markdown="1" class="body">
-
 To further expand on the example; a bound on the leading error term cam be determined when numerically integrating some function $$ f\left(x\right) $$ over an interval $$ \left[a,\:b\right] $$.
 
 - $$ \frac{\left(b-a\right)}{h}\left|\left(-\frac{h^3}{24}\right)f''\left(\xi \:\right)\right| = \left(b-a\right)\left(\frac{h^2}{24}\right)f''\left(\xi \:\:\right) $$
@@ -72,6 +55,3 @@ We can then determine how many subintervals __(1)__ of equal size would be requi
 - $$ \left(\frac{2}{h}\right)\left(\frac{h^3}{24}\right)e^1\:<\:10^{-4} $$
 - $$ h = \sqrt{\frac{10^{-4}\cdot \:\:24}{2e}} \to \frac{2}{N} = \sqrt{\frac{10^{-4}\cdot \:\:24}{2e}} $$
 - $$ N = \lceil 95.18897\dots \rceil = 96 $$
-
-</div>
-</section>

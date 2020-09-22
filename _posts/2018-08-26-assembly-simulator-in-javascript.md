@@ -6,12 +6,7 @@ date: 2018-08-26
 tag: JavaScript
 ---
 
-<section markdown="1">
-<!-- instruction format -->
-### Instruction Format
----
-<section markdown="1" class="section-column">
-<div markdown="1" class="body">
+## Instruction Format
 
 ```javascript
 // [0000]   [0000 0000 0000]
@@ -21,24 +16,13 @@ var opcode  = ((this.ir >> 12) & 0xF);
 var operand = (this.ir & 0xFFF);
 ```
 
-</div>
-<div markdown="1" class="body">
-
 Instructions are 16 bits in size; 4 bits for the opcode, 12 bits for the address.
 An instruction is encoded with both the opcode and its operands.
 
 To decode an instruction the bitwise operators, [SHIFT](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Right_shift) and [AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND), are used to obtain both the opcode and operand.
 
-</div>
-</section>
-</section>
 
-<section markdown="1">
-<!-- the control processing unit -->
-### The CPU
----
-<section markdown="1" class="section-column">
-<div markdown="1" class="body">
+## The CPU
 
 ```javascript
 this.ac = 0x0;
@@ -50,9 +34,6 @@ this.in = 0x0;
 this.out = 0x0;
 ```
 
-</div>
-<div markdown="1" class="body">
-
 The CPU contains 7 Registers, the [Accumulator](https://en.wikipedia.org/wiki/Accumulator_(computing)) being the only [general purpose](https://en.wikipedia.org/wiki/Processor_register#GPR]) register.
 
 - `AC` a 16-bit register which holds the results of an arithmetical or logical operation.
@@ -62,11 +43,6 @@ The CPU contains 7 Registers, the [Accumulator](https://en.wikipedia.org/wiki/Ac
 - `MAR` a 12-bit register that holds a memory address of an instruction (the operand of an instruction).
 - `IN` an 8-bit register that holds data read from an input device.
 - `OUT` an 8-bit register that holds data that is ready for the output device.
-
-</div>
-</section>
-<section markdown="1" class="section-column">
-<div markdown="1" class="body">
 
 ```javascript
 // cpu fetch
@@ -83,23 +59,11 @@ service.execute = function() {
 }
 ```
 
-</div>
-<div markdown="1" class="body">
-
 On each CPU cycle the Instruction Pointer ([MAR](https://en.wikipedia.org/wiki/Program_counter)) is updated using the Program Counter ([PC](https://en.wikipedia.org/wiki/Program_counter)). An instruction is then fetched from the Instruction Register ([IR](https://en.wikipedia.org/wiki/Instruction_register)) where the opcode and operand are decoded from the instruction, and executed by the CPU.
 
-</div>
-</section>
-</section>
 
-<section markdown="1">
-<!-- the memory -->
-### The Memory
----
-<section markdown="1" class="section-column">
-<div markdown="1" class="body">
+## The Memory
 
-<!-- left -->
 ```javascript
 service.data = Array(4096);
 
@@ -121,18 +85,10 @@ service.write = function (address, value) {
 }
 ```
 
-</div>
-<div markdown="1" class="body">
-
-<!-- right -->
 A simple array is used to represent the machines memory; A size of 4096 is used since operands are only 12 bytes in size.
 
-The memory service contains three functions.
+The memory service contains two functions.
 `read` retrieves a byte from the given address while
 `write` stores a given byte value at the specified address.
 
 Both functions will throw an error if the given address isn't within the bounds of the address space (0x0, 0x1000).
-
-</div>
-</section>
-</section>
