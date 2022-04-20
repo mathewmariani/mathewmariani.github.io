@@ -1,31 +1,24 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync');
+var browser = require('browser-sync');
 var cp = require('child_process');
 
-var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+var port = process.env.SERVER_PORT || 8080;
 
-gulp.task('jekyll-build', function (done) {
-  browserSync.notify(messages.jekyllBuild);
-  return cp.spawn(jekyll, ['build'], {stdio: 'inherit'})
-    .on('close', done);
-});
+gulp.task('build', gulp.series(function(callback) {
+  var opts = ['build']
+  var jekyll = cp.spawn('jekyll', opts, { stdio: 'inherit' })
+  return jekyll.on('close', callback)
+}))
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-  browserSync.reload();
-});
+gulp.task('browser', gulp.series('build', function() {
+  browser.init({ server: './_site', port: port })
+}))
 
-gulp.task('browser-sync', ['jekyll-build'], function() {
-  browserSync({
-    server: {
-      baseDir: '_site'
-    }
-  });
-});
+gulp.task('browser:reload', gulp.series('build', function() {
+  browser.reload()
+}))
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   const list = [
     '*.css',
     '*.html',
@@ -34,8 +27,8 @@ gulp.task('watch', function () {
     '_includes/*.html',
     '_layouts/*.html',
     '_posts/*.md'
-  ];
-  gulp.watch(list, ['jekyll-rebuild']);
-});
+  ]
+  gulp.watch(list, gulp.series('build', 'browser:reload'))
+})
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', gulp.series('browser', 'watch'))

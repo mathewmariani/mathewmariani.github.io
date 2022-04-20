@@ -17,9 +17,14 @@ kramdown:
 
 exclude:
   - "node_modules"
+  - "Gemfile"
+  - "Gemfile.lock"
   - "gulpfile.js"
+  - "LICENSE"
+  - "package-lock.json"
   - "package.json"
   - "vendor"
+  - "README.md"
 
 # metadata
 meta:
