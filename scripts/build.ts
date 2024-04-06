@@ -56,6 +56,13 @@ function _buildWebsite() {
       console.error(err);
     }
   });
+
+  // copy extra to output
+  fs.cp("resources/extra", "website", { recursive: true }, (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
 }
 
 // main.js
