@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-// import Markdown from "markdown-it";
 import Mustache from "mustache";
 import { globSync } from "glob";
 
@@ -24,9 +23,15 @@ function _buildPage(body: string) {
   return Mustache.render(page, view, partials)
 }
 
-function _buildWebsite() {
-  console.log("Building website...");
+function _copyDirectory(source: string, destination: string) {
+  fs.cp(source, destination, { recursive: true }, (err) => {
+    if (err) {
+      console.error(`Error copying from ${source} to ${destination}:`, err);
+    }
+  });
+}
 
+function _buildWebsite() {
   // create website directory for output
   if (!fs.existsSync("website")) {
     fs.mkdirSync("website");
@@ -34,35 +39,25 @@ function _buildWebsite() {
 
   // glob all .html files
   const html_glob = globSync("resources/content/*.html");
-  for (const file of html_glob) {
-    console.log("found a .html file:", file);
+  html_glob.forEach((file: string) => {
     try {
       const name = path.parse(file).name;
       const body = fs.readFileSync(file, "utf8");
       const page = _buildPage(body);
+
       fs.writeFile(`website/${name}.html`, page, (err) => {
         if (err) {
-          console.error(err);
+          console.error("Error writing file:", err);
         }
       });
     } catch (err) {
-      console.error(err);
+      console.error("Error processing file:", err);
     }
-  }
+  });
 
   // copy assets to output
-  fs.cp("resources/assets", "website/assets", { recursive: true }, (err) => {
-    if (err) {
-      console.error(err);
-    }
-  });
-
-  // copy extra to output
-  fs.cp("resources/extra", "website", { recursive: true }, (err) => {
-    if (err) {
-      console.error(err);
-    }
-  });
+  _copyDirectory("resources/extra", "website");
+  _copyDirectory("resources/assets", "website/assets");
 }
 
 // main.js
