@@ -3,6 +3,7 @@
 		"build": "ts-node scripts/build.ts"
 	},
 	"dependencies": {
+		"bootstrap": "^5.3.3",
 		"glob": "^10.3.10",
 		"mustache": "^4.2.0",
 		"ts-node": "^10.9.2",

@@ -3,13 +3,27 @@ import path from "path";
 import Mustache from "mustache";
 import { globSync } from "glob";
 
-// const md = Markdown({ html: true })
+// string constants
+const content_path = "resources/content";
+const mustache_path = "resources/mustache";
+const assets_path = "website/assets";
 
 // mustache partials
-const page = fs.readFileSync("resources/mustache/page.mustache", "utf8");
-const meta = fs.readFileSync("resources/mustache/meta.mustache", "utf8");
-const header = fs.readFileSync("resources/mustache/header.mustache", "utf8");
-const footer = fs.readFileSync("resources/mustache/footer.mustache", "utf8");
+const page = fs.readFileSync(`${mustache_path}/page.mustache`, "utf8");
+const meta = fs.readFileSync(`${mustache_path}/meta.mustache`, "utf8");
+const header = fs.readFileSync(`${mustache_path}/header.mustache`, "utf8");
+const footer = fs.readFileSync(`${mustache_path}/footer.mustache`, "utf8");
+
+// helper functions
+function _copyDirectory(source: string, destination: string) {
+  fs.cp(source, destination, { recursive: true, force: true }, (err) => { if (err) { console.error(`Error copying directory from ${source} to ${destination}:`, err); } });
+}
+function _copyFile(source: string, destination: string) {
+  fs.copyFile(source, destination, (err) => { if (err) { console.error(`Error copying file from ${source} to ${destination}:`, err); } });
+}
+function _writeFile(destination: string, content: string) {
+  fs.writeFile(destination, content, (err) => { if (err) { console.error(`Error writting file to ${destination}:`, err); } });
+}
 
 // builds a single page
 function _buildPage(body: string) {
@@ -23,41 +37,31 @@ function _buildPage(body: string) {
   return Mustache.render(page, view, partials)
 }
 
-function _copyDirectory(source: string, destination: string) {
-  fs.cp(source, destination, { recursive: true }, (err) => {
-    if (err) {
-      console.error(`Error copying from ${source} to ${destination}:`, err);
-    }
-  });
-}
-
 function _buildWebsite() {
+  console.log("Building website...");
+
   // create website directory for output
   if (!fs.existsSync("website")) {
     fs.mkdirSync("website");
   }
 
   // glob all .html files
-  const html_glob = globSync("resources/content/*.html");
-  html_glob.forEach((file: string) => {
-    try {
-      const name = path.parse(file).name;
-      const body = fs.readFileSync(file, "utf8");
-      const page = _buildPage(body);
+  const html_glob = globSync(`${content_path}/*.html`);
+  for (const file of html_glob) {
+    const name = path.parse(file).base;
+    const body = fs.readFileSync(file, "utf8");
+    const page = _buildPage(body);
 
-      fs.writeFile(`website/${name}.html`, page, (err) => {
-        if (err) {
-          console.error("Error writing file:", err);
-        }
-      });
-    } catch (err) {
-      console.error("Error processing file:", err);
-    }
-  });
+    // copy to output
+    _writeFile(`website/${name}`, page);
+  }
 
-  // copy assets to output
-  _copyDirectory("resources/extra", "website");
+  // copy to output
   _copyDirectory("resources/assets", "website/assets");
+  _copyDirectory("resources/extra", "website");
+
+  // copy bootstrap and vuejs
+  _copyFile("node_modules/bootstrap/dist/css/bootstrap.min.css", `${assets_path}/css/bootstrap.min.css`);
 }
 
 // main.js
