@@ -16,13 +16,13 @@ const footer = fs.readFileSync(`${mustache_path}/footer.mustache`, "utf8");
 
 // helper functions
 function _copyDirectory(source: string, destination: string) {
-  fs.cp(source, destination, { recursive: true, force: true }, (err) => { if (err) { console.error(`Error copying directory from ${source} to ${destination}:`, err); } });
+  fs.cp(source, destination, { recursive: true, force: true }, (err: any) => { if (err) { console.error(`Error copying directory from ${source} to ${destination}:`, err); } });
 }
 function _copyFile(source: string, destination: string) {
-  fs.copyFile(source, destination, (err) => { if (err) { console.error(`Error copying file from ${source} to ${destination}:`, err); } });
+  fs.copyFile(source, destination, (err: any) => { if (err) { console.error(`Error copying file from ${source} to ${destination}:`, err); } });
 }
 function _writeFile(destination: string, content: string) {
-  fs.writeFile(destination, content, (err) => { if (err) { console.error(`Error writting file to ${destination}:`, err); } });
+  fs.writeFile(destination, content, (err: any) => { if (err) { console.error(`Error writting file to ${destination}:`, err); } });
 }
 
 // builds a single page
