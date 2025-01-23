@@ -6,10 +6,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^5.1.8"
-  },
   "devDependencies": {
-    "bootstrap": "^5.3.3"
+    "astro": "^5.1.8"
   }
 }
