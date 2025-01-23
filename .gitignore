@@ -1,5 +1,8 @@
 # build output
-website/
+dist/
+
+# generated types
+.astro/
 
 # Dependency directories
 node_modules/

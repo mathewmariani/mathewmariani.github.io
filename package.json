@@ -1,14 +1,12 @@
 {
-	"scripts": {
-		"build": "ts-node scripts/build.ts"
-	},
-	"devDependencies": {
-		"@types/mustache": "^4.2.5",
-		"bootstrap": "^5.3.3",
-		"glob": "^10.3.10",
-		"mustache": "^4.2.0",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.3.3"
-
-	}
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.1.8"
+  }
 }
