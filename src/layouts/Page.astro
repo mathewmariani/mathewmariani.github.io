@@ -1,0 +1,22 @@
+---
+import Footer from "../components/Footer.astro";
+import Meta from "../components/Meta.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<html lang="en" data-bs-theme="dark">
+	<head>
+		<Meta />
+	</head>
+
+	<body class="container" id="top">
+		<Navigation />
+		<main>
+			<article>
+				<slot />
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style></style>
