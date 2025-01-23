@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "astro": "^5.1.8"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.3"
   }
 }

@@ -1,5 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Page.astro';
+import { ProjectsLink, ResumeLink } from '../consts';
 ---
 
 <Layout>
@@ -8,8 +9,8 @@ import Layout from '../layouts/Layout.astro';
 		<hr>
 		<p class="mb-0">My website is still under development. But the following pages are still available.</p>
 		<ul>
-			<li><a href="./resume.html" class="alert-link">Resume</a></li>
-			<li><a href="./projects.html" class="alert-link">Projects</a></li>
+			<li><a href={ResumeLink()} class="alert-link">Resume</a></li>
+			<li><a href={ProjectsLink()} class="alert-link">Projects</a></li>
 		</ul>
-	  </div>
+	</div>
 </Layout>
