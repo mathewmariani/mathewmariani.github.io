@@ -1,21 +1,24 @@
 ---
 import Layout from '../layouts/Page.astro';
-import { ProjectsLink, ResumeLink } from '../consts';
+import { ProjectsLink, ResumeLink, UbisoftMontreal, StockholmSyndromeAI, CoursesLink } from '../consts';
 ---
 
 <Layout>
-		<h1>Hey, 👋</h1>
+		<h1>Hey, I'm Mathew 👋</h1>
 		<p class="fs-5">
-			I am a versatile professional with a strong background in software development, specializing in back-end systems for online gaming services, including storefronts, matchmaking, and voice chat.
+			I am a versatile professional with a strong background in software development, primarly working in backend-services and AI systems.
+			As an avid hobbyist, I'm constantly experimenting with new ideas and technologies, pushing my skillset further and keeping my approach fresh.
 		</p>
 		<p class="fs-5">
-			Additionally, my experience as a program analyst has involved working closely with engineers and designers to develop multi-tiered artificial intelligence systems.
+			Beyond software development, I teach some college courses in Computer Graphics and Artificial Intelligence systems while also serving as the head coach of a varsity rugby program. These roles allow me to contribute to my community, stay engaged in education, and further develop my leadership and mentorship skills.
 		</p>
 		<p class="fs-5">
-			Beyond software development, I teach college courses in computer graphics and artificial intelligence systems while also serving as the head coach of a varsity rugby program. These roles allow me to contribute to my community, stay engaged in education, and further develop my leadership and mentorship skills.
+			My previous experiences include Software Developer @ <a href={UbisoftMontreal()} class="alert-link">Ubisoft Montreal</a>, Programmer Analyst @ <a href={StockholmSyndromeAI()} class="alert-link">Stockholm Syndrome.AI</a>.
+			Want the full picture? Take a look at my resume.
 		</p>
 		<ul class="list">
 			<li><a href={ResumeLink()} class="alert-link">Resume</a></li>
 			<li><a href={ProjectsLink()} class="alert-link">Projects</a></li>
+			<li><a href={CoursesLink()} class="alert-link">Courses</a></li>
 		</ul>
 </Layout>
