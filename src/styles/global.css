@@ -3,7 +3,7 @@
     --highlight-background: null;
 }
 ::selection {
-    color: var(--highlight-color);
+    /* color: var(--highlight-color); */
     background: var(--highlight-background);
 }
 
@@ -16,7 +16,7 @@
     max-width: 100vw;
     z-index: -1;
     border-radius: 2px;
-    background-color: #576574;
+    background: var(--highlight-color);
 }
 
 .list li {
