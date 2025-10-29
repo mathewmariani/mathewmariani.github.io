@@ -1,36 +1,28 @@
 ---
-import Footer from "@/components/Footer.astro";
-import Meta from "@/components/Meta.astro";
+import Layout from '@/layouts/Page.astro';
+
 import { ProjectsLink, ResumeLink, UbisoftMontreal, StockholmSyndromeAI, CoursesLink } from '../consts';
 ---
 
-<html lang="en" data-bs-theme="dark">
-	<head>
-		<Meta />
-	</head>
-
-	<body class="container" id="top">
-		<main>
-			<h1 class="display-2"><b>Hey, I'm Mathew 👋</b></h1>
-			<div class="highlight"></div>
-			<p class="fs-5">
-				I am a versatile professional with a strong background in software development, having worked in backend-services and artificial intelligence systems.
-				As an avid hobbyist, I'm constantly tinkering with projects to broaden my skillset, and keep my approach fresh.
-			</p>
-			<p class="fs-5">
-				Beyond software development, I teach programming courses while also serving as the head coach of a varsity rugby program. These roles let me contribute to my community, stay engaged in education, and further develop my soft skills.
-			</p>
-			<p class="fs-5">
-				My previous experiences includes Software Developer @ <a href={UbisoftMontreal()} class="alert-link">Ubisoft Montreal</a>, and Programmer Analyst @ <a href={StockholmSyndromeAI()} class="alert-link">Stockholm Syndrome.AI</a>.
-				Want the full picture?
-			</p>
-			<ul class="list">
-				<li><a href={ResumeLink()} class="alert-link">Resume</a></li>
-				<li><a href={ProjectsLink()} class="alert-link">Projects</a></li>
-				<li><a href={CoursesLink()} class="alert-link">Courses</a></li>
-			</ul>
-		</main>
-		<Footer />
-	</body>
-</html>
-<style></style>
+<Layout>
+	<h1 class="display-2"><b>Hey, I'm Mathew 👋</b></h1>
+	<div class="highlight"></div>
+	<article>
+		<p class="fs-5">
+			I am a versatile professional with a strong background in software development, having worked in backend-services and artificial intelligence systems.
+			As an avid hobbyist, I'm constantly tinkering with projects to broaden my skillset, and keep my approach fresh.
+		</p>
+		<p class="fs-5">
+			Beyond software development, I teach programming courses while also serving as the head coach of a varsity rugby program. These roles let me contribute to my community, stay engaged in education, and further develop my soft skills.
+		</p>
+		<p class="fs-5">
+			My previous experiences includes Software Developer @ <a href={UbisoftMontreal()} class="alert-link">Ubisoft Montreal</a>, and Programmer Analyst @ <a href={StockholmSyndromeAI()} class="alert-link">Stockholm Syndrome.AI</a>.
+			Want the full picture?
+		</p>
+		<ul class="list">
+			<li><a href={ResumeLink()} class="alert-link">Resume</a></li>
+			<li><a href={ProjectsLink()} class="alert-link">Projects</a></li>
+			<li><a href={CoursesLink()} class="alert-link">Courses</a></li>
+		</ul>
+	</article>
+</Layout>
