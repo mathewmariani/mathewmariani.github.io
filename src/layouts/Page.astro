@@ -3,17 +3,15 @@ import Footer from '@/components/Footer.astro';
 import Meta from '@/components/Meta.astro';
 ---
 
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 	<head>
 		<Meta />
 	</head>
 
-	<body class="container" id="top">
+	<body>
 		<main>
 			<slot />
 		</main>
-		<Footer />
-
 		<script src="/sugar.js" is:inline></script>
 	</body>
 </html>

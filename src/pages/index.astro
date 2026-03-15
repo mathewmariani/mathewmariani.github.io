@@ -11,22 +11,21 @@ import {
 ---
 
 <Layout>
-	<h1 class="display-2"><b>Hey, I'm Mathew 👋</b></h1>
-	<div class="highlight"></div>
-	<article>
-		<p class="fs-5">
+	<div class="title-card">
+		<h1>Hi, I'm Mathew.</h1>
+		<p class="lead">
 			I am a versatile professional with a strong background in software
 			development, having worked in backend-services and artificial
 			intelligence systems. As an avid hobbyist, I'm constantly tinkering
 			with projects to broaden my skillset, and keep my approach fresh.
 		</p>
-		<p class="fs-5">
+		<!-- <p class="lead">
 			Beyond software development, I teach programming courses while also
 			serving as the head coach of a varsity rugby program. These roles
 			let me contribute to my community, stay engaged in education, and
 			further develop my soft skills.
 		</p>
-		<p class="fs-5">
+		<p class="lead">
 			My previous experiences includes Software Developer @ <a
 				href={UbisoftMontreal()}
 				class="alert-link">Ubisoft Montreal</a
@@ -34,11 +33,19 @@ import {
 				href={StockholmSyndromeAI()}
 				class="alert-link">Stockholm Syndrome.AI</a
 			>. Want the full picture?
-		</p>
-		<ul class="list">
-			<li><a href={ResumeLink()} class="alert-link">Resume</a></li>
-			<li><a href={ProjectsLink()} class="alert-link">Projects</a></li>
-			<li><a href={CoursesLink()} class="alert-link">Courses</a></li>
-		</ul>
-	</article>
+		</p> -->
+		<div class="hstack justify-content-around">
+			<a href={ProjectsLink()} class="alert-link">Projects</a>
+			<a href={ResumeLink()} class="alert-link">Resume</a>
+			<a href={CoursesLink()} class="alert-link">Courses</a>
+		</div>
+		<div class="connect">
+			<div class="d-grid gap-2">
+				<button class="btn btn-primary" type="button">Button</button>
+				<button class="btn btn-primary" type="button">Button</button>
+			</div>
+		</div>
+	</div>
 </Layout>
+
+<style></style>
