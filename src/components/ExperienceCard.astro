@@ -1,0 +1,33 @@
+---
+const { company, role, years, bullets = [], tech = [] } = Astro.props;
+---
+
+<div class="card">
+    <div class="card-body">
+        <h2>{company} | {role}</h2>
+        <p>{years}</p>
+
+        {
+            bullets.length > 0 && (
+                <ul class="list">
+                    {bullets.map((b) => (
+                        <li>{b}</li>
+                    ))}
+                </ul>
+            )
+        }
+
+        {
+            tech.length > 0 && (
+                <>
+                    <h4>Technologies used</h4>
+                    <ul class="list-unstyled d-flex flex-wrap gap-2">
+                        {tech.map((t) => (
+                            <li class="badge">{t}</li>
+                        ))}
+                    </ul>
+                </>
+            )
+        }
+    </div>
+</div>

@@ -1,0 +1,24 @@
+---
+const { email, github, linkedin } = Astro.props;
+---
+
+<div class="card">
+    <div class="card-body">
+        <h4>Contact Information</h4>
+        <ul class="list-unstyled">
+            <li>
+                <a class="badge" href={`mailto:${email}`}>{email}</a>
+            </li>
+            <li>
+                <a class="badge" href={`https://github.com/${github}`}
+                    >@{github}</a
+                >
+            </li>
+            <li>
+                <a class="badge" href={`https://linkedin.com/in/${linkedin}`}>
+                    in/{linkedin}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

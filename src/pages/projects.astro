@@ -1,136 +1,69 @@
 ---
 import Layout from '@/layouts/Page.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+const projects = [
+  {
+    href: 'https://clubrugby.ca',
+    title: 'ClubRugby.ca',
+    description:
+      'A centralized platform to view fixtures, scores, and schedules for club rugby teams in Canada.',
+    tech: ['VueJS', 'TypeScript', 'Python'],
+  },
+  {
+    href: 'https://mathewmariani.com/interactive-demos',
+    title: 'Interactive Demos',
+    description: 'Interactive demos inspired by Amit Patel.',
+    tech: ['VueJS', 'C++', 'cmake', 'WebAssembly'],
+  },
+  {
+    href: 'https://mathewmariani.com/pti-projects',
+    title: 'PTI Projects',
+    description:
+      'A *small* framework for making retro games with chunky pixels.',
+    tech: ['C99', 'C++', 'WebAssembly'],
+  },
+  {
+    href: 'https://mathewmariani.com/ngram-nlp',
+    title: 'Natural Language Processing',
+    description:
+      'Automatic Language Identification using n-gram based language models',
+    tech: ['Python', 'VueJS', 'Vite'],
+  },
+  {
+    href: 'https://mathewmariani.com/cel8-samples',
+    title: 'cel8',
+    description: 'A *tiny* framework for grid-based ASCII games in c99.',
+    tech: ['C99', 'WebAssembly'],
+  },
+  {
+    href: 'https://mathewmariani.com/mango-assembler-simulator',
+    title: 'Mango Assembler and Simulator',
+    description:
+      'A simulator with a simplified assembler syntax implemented in TypeScript, using VueJS.',
+    tech: ['TypeScript', 'Vite', 'VueJS', 'Assembly'],
+  },
+  {
+    href: 'https://mathewmariani.com/marie-simulator',
+    title: 'Marie Assembler and Simulator',
+    description: 'Assembler and Simulator written in Javascript using VueJS.',
+    tech: ['Javascript', 'VueJS'],
+  },
+  {
+    href: 'https://mathewmariani.com/ngram-nlp',
+    title: 'Boids',
+    description:
+      "An implementation of Craig Reynolds' Boids as an exploration in CoffeeScript.",
+    tech: ['CoffeeScript'],
+  },
+];
 ---
 
 <Layout>
-  <h1 class="display-2"><b>Projects 🛠️</b></h1>
-  <div class="highlight"></div>
-  <p class="lead">A showcase of personal projects I've created.</p>
-
-  <article id="projects">
-    <!-- clubrugby.ca -->
-    <hr />
-    <section class="project">
-      <h2><a href="https://clubrugby.ca">ClubRugby.ca</a></h2>
-      <p>
-        A centralized platform to view fixtures, scores, and schedules for club
-        rugby teams in Canada.
-      </p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">VueJS</li>
-        <li class="badge rounded-pill text-bg-primary">Python</li>
-      </ul>
-    </section>
-
-    <!-- interactive-demos -->
-    <hr />
-    <section class="project">
-      <h2>
-        <a href="https://mathewmariani.com/interactive-demos"
-          >Interactive Demos</a>
-      </h2>
-      <p>Interactive demos inspired by Amit Patel.</p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">VueJS</li>
-        <li class="badge rounded-pill text-bg-primary">C++</li>
-        <li class="badge rounded-pill text-bg-primary">cmake</li>
-        <li class="badge rounded-pill text-bg-primary">WebAssembly</li>
-      </ul>
-    </section>
-
-    <!-- pti -->
-    <hr />
-    <section class="project">
-      <h2><a href="https://mathewmariani.com/pti-projects">PTI Projects</a></h2>
-      <p>A *small* framework for making retro games with chunky pixels.</p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">C99</li>
-        <li class="badge rounded-pill text-bg-primary">C++</li>
-        <li class="badge rounded-pill text-bg-primary">WebAssembly</li>
-      </ul>
-    </section>
-
-    <!-- ngram-npl -->
-    <hr />
-    <section class="project">
-      <h2>
-        <a href="https://mathewmariani.com/ngram-nlp"
-          >Natural Language Processing</a>
-      </h2>
-      <p>
-        Automatic Language Identification using n-gram based language models.
-      </p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">Python</li>
-        <li class="badge rounded-pill text-bg-primary">VueJS</li>
-        <li class="badge rounded-pill text-bg-primary">Vite</li>
-      </ul>
-    </section>
-
-    <!-- cel8 -->
-    <hr />
-    <section class="project">
-      <h2><a href="https://mathewmariani.com/cel8-samples">cel8</a></h2>
-      <p>A <i>*tiny*</i> framework for grid-based ASCII games in c99.</p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">C99</li>
-        <li class="badge rounded-pill text-bg-primary">WebAssembly</li>
-      </ul>
-    </section>
-
-    <!-- Mango -->
-    <hr />
-    <section class="project">
-      <h2>
-        <a href="https://mathewmariani.com/mango-assembler-simulator/"
-          >Mango 🥭</a>
-      </h2>
-      <p>
-        A simulator with a simplified assembler syntax implemented in
-        TypeScript, using VueJS.
-      </p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">TypeScript</li>
-        <li class="badge rounded-pill text-bg-primary">Vite</li>
-        <li class="badge rounded-pill text-bg-primary">VueJS</li>
-        <li class="badge rounded-pill text-bg-primary">Assembly</li>
-      </ul>
-    </section>
-
-    <!-- Marie -->
-    <hr />
-    <section class="project">
-      <h2>
-        <a href="https://mathewmariani.com/marie-simulator">Marie Simulator</a>
-      </h2>
-      <p>Assembler and Simulator written in Javascript using VueJS.</p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">Javascript</li>
-        <li class="badge rounded-pill text-bg-primary">Vite</li>
-        <li class="badge rounded-pill text-bg-primary">VueJS</li>
-        <li class="badge rounded-pill text-bg-primary">Assembly</li>
-      </ul>
-    </section>
-
-    <!-- coffee-boids -->
-    <hr />
-    <section class="project">
-      <h2><a href="https://mathewmariani.com/coffee-boids">Boids</a></h2>
-      <p>
-        An implementation of Craig Reynolds' Boids as an exploration in
-        CoffeeScript.
-      </p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">CoffeeScript</li>
-      </ul>
-    </section>
-  </article>
+  <div class="vstack gap-3">
+    <h1>
+      A showcase of personal projects I've created using various technologies.
+    </h1>
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
 </Layout>

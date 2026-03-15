@@ -1,48 +1,28 @@
 ---
 import Layout from '@/layouts/Page.astro';
+import CourseCard from '@/components/CourseCard.astro';
+
+const courses = [
+  {
+    title: 'GPR300',
+    href: 'https://mathewmariani.com/gpr300-sokol',
+    description:
+      'A learn-by-doing course package to gain a profound appreciation for the graphics pipeline, rendering tools, post-processing algorithms and industry-standard shaders.',
+    tech: ['C++', 'cmake', 'OpenGL', 'WebAssembly'],
+  },
+  {
+    title: 'GPR340',
+    href: 'https://mathewmariani.com/gpr340-sokol',
+    description:
+      'A learn-by-doing course package to gain a technical introduction to the core concepts of artificial intelligence in games.',
+    tech: ['C++', 'cmake', 'Artificial Intelligence', 'WebAssembly'],
+  },
+];
 ---
 
 <Layout>
-  <h1 class="display-2"><b>Course Packages 📚</b></h1>
-  <div class="highlight"></div>
-  <p class="lead">Course packages for courses I teach.</p>
-
-  <article id="projects">
-    <!-- GPR300 -->
-    <hr />
-    <section class="project">
-      <h2><a href="https://mathewmariani.com/gpr300-sokol">GPR300</a></h2>
-      <p>
-        A learn-by-doing course package to gain a profound appreciation for the
-        graphics pipeline, rendering tools, post-processing algorithms and
-        industry-standard shaders.
-      </p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">C++</li>
-        <li class="badge rounded-pill text-bg-primary">cmake</li>
-        <li class="badge rounded-pill text-bg-primary">OpenGL</li>
-        <li class="badge rounded-pill text-bg-primary">WebAssembly</li>
-      </ul>
-    </section>
-
-    <!-- GPR340 -->
-    <hr />
-    <section class="project">
-      <h2><a href="https://mathewmariani.com/gpr340-sokol">GPR340</a></h2>
-      <p>
-        A learn-by-doing course package to gain a technical introduction to the
-        core concepts of artificial intelligence in games.
-      </p>
-      <h4>Technologies used</h4>
-      <ul>
-        <li class="badge rounded-pill text-bg-primary">C++</li>
-        <li class="badge rounded-pill text-bg-primary">cmake</li>
-        <li class="badge rounded-pill text-bg-primary">
-          Artificial Intelligence
-        </li>
-        <li class="badge rounded-pill text-bg-primary">WebAssembly</li>
-      </ul>
-    </section>
-  </article>
+  <div class="vstack gap-3">
+    <h1>Course packages for courses I've taught.</h1>
+    {courses.map((course) => <CourseCard {...course} />)}
+  </div>
 </Layout>
