@@ -43,11 +43,8 @@ h6 {
 }
 
 .card:hover {
-    box-shadow: var(--bs-yellow);
-    transform: translateY(-3px);
-
-    --bs-card-border-color: var(--bs-pink);
     --bs-card-bg: var(--bs-pink);
+    --bs-card-border-color: var(--bs-pink);
 }
 
 
@@ -194,4 +191,10 @@ main .list-item-info:hover {
 
 footer .list-item-info:hover {
     color: var(--bs-white);
+}
+
+footer {
+    margin-top: 1rem;
+    color: var(--bs-purple);
+    background-color: var(--bs-yellow);
 }
