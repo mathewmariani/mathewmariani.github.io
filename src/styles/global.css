@@ -24,6 +24,15 @@ h6 {
     font-weight: 1000;
 }
 
+nav {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+
+    color: var(--bs-white);
+    background-color: var(--bs-purple);
+}
+
 .btn-primary {
     --bs-btn-bg: var(--bs-yellow);
     --bs-btn-border-color: var(--bs-yellow);
@@ -60,13 +69,15 @@ h6 {
     top: calc(50% - 50px);
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 3% 5% 3% 5%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 32px;
-    background: #344599;
+    /* padding: 3% 5% 3% 5%; */
     box-sizing: border-box;
+
+    background-color: var(--bs-purple);
+    color: var(--bs-white);
+
 }
 
-.connect {
+/* .connect {
     width: 80%;
     position: absolute;
     bottom: -100px;
@@ -193,8 +204,18 @@ footer .list-item-info:hover {
     color: var(--bs-white);
 }
 
-footer {
-    margin-top: 1rem;
-    color: var(--bs-purple);
-    background-color: var(--bs-yellow);
+div.entry:hover {
+    background-color: var(--bs-pink);
+}
+
+a.course {
+    text-decoration: none !important;
+    background-color: var(--bs-purple);
+    color: var(--bs-white);
+
+    padding: 1rem 1rem;
+}
+
+a.course:hover {
+    background-color: var(--bs-pink);
 }
