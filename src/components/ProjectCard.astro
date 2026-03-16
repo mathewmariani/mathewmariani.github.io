@@ -2,22 +2,18 @@
 const { href, title, description, tech = [] } = Astro.props;
 ---
 
-<a class="card text-decoration-none h-100" href={href}>
-    <div class="card-body">
-        <h2>{title}</h2>
-        <p>{description}</p>
+<a class="project" href={href}>
+    <h2>{title}</h2>
+    <p>{description}</p>
 
-        {
-            tech.length > 0 && (
-                <>
-                    <h4>Technologies used</h4>
-                    <ul class="list-unstyled d-flex flex-wrap gap-2">
-                        {tech.map((t) => (
-                            <li class="badge">{t}</li>
-                        ))}
-                    </ul>
-                </>
-            )
-        }
-    </div>
+    {
+        tech.length > 0 && (
+            <>
+                <h5>Technologies used</h5>
+                {tech.map((t) => (
+                    <span class="badge">{t}</span>
+                ))}
+            </>
+        )
+    }
 </a>

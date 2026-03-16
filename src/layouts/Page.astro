@@ -1,4 +1,5 @@
 ---
+import Navbar from '@/components/Navbar.astro';
 import Footer from '@/components/Footer.astro';
 import Meta from '@/components/Meta.astro';
 ---
@@ -9,11 +10,12 @@ import Meta from '@/components/Meta.astro';
 	</head>
 
 	<body>
-		<main class="container">
+		<Navbar />
+		<main class="container py-3">
 			<slot />
 		</main>
-		<script src="/sugar.js" is:inline></script>
 		<Footer />
+		<script src="/sugar.js" is:inline></script>
 	</body>
 </html>
 <style></style>

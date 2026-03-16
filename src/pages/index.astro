@@ -1,5 +1,5 @@
 ---
-import Layout from '@/layouts/Page.astro';
+import Home from '@/layouts/Home.astro';
 
 import {
 	ProjectsLink,
@@ -10,8 +10,8 @@ import {
 } from '../consts';
 ---
 
-<Layout>
-	<div class="title-card">
+<Home>
+	<div class="title-card px-3 py-3">
 		<h1>Hi, I'm Mathew.</h1>
 		<p class="lead">
 			I am a versatile professional with a strong background in software
@@ -34,18 +34,14 @@ import {
 				class="alert-link">Stockholm Syndrome.AI</a
 			>. Want the full picture?
 		</p> -->
-		<div class="hstack justify-content-around">
-			<a href={ProjectsLink()} class="alert-link">Projects</a>
-			<a href={ResumeLink()} class="alert-link">Resume</a>
-			<a href={CoursesLink()} class="alert-link">Courses</a>
-		</div>
-		<div class="connect">
-			<div class="d-grid gap-2">
-				<button class="btn btn-primary" type="button">Button</button>
-				<button class="btn btn-primary" type="button">Button</button>
+		<section class="connect">
+			<div class="vstack gap-2">
+				<a href={ProjectsLink()}>Projects</a>
+				<a href={ResumeLink()}>Resume</a>
+				<a href={CoursesLink()}>Courses</a>
 			</div>
-		</div>
+		</section>
 	</div>
-</Layout>
+</Home>
 
 <style></style>
