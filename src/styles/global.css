@@ -33,30 +33,6 @@ nav {
     background-color: var(--bs-purple);
 }
 
-.btn-primary {
-    --bs-btn-bg: var(--bs-yellow);
-    --bs-btn-border-color: var(--bs-yellow);
-    --bs-btn-hover-bg: var(--bs-yellow);
-    --bs-btn-hover-border-color: var(--bs-yellow);
-    --bs-btn-active-bg: var(--bs-yellow);
-    --bs-btn-active-border-color: var(--bs-yellow);
-}
-
-.card {
-    border-radius: 0;
-    --bs-card-border-width: var(0);
-    --bs-card-border-color: var(--bs-purple);
-    --bs-card-border-radius: var(0);
-    --bs-card-bg: var(--bs-purple);
-    --bs-card-color: var(--bs-white);
-}
-
-.card:hover {
-    --bs-card-bg: var(--bs-pink);
-    --bs-card-border-color: var(--bs-pink);
-}
-
-
 .badge {
     color: var(--bs-purple);
     background-color: var(--bs-yellow);
@@ -69,12 +45,10 @@ nav {
     top: calc(50% - 50px);
     left: 50%;
     transform: translate(-50%, -50%);
-    /* padding: 3% 5% 3% 5%; */
     box-sizing: border-box;
 
     background-color: var(--bs-purple);
     color: var(--bs-white);
-
 }
 
 /* .connect {
