@@ -33,30 +33,6 @@ nav {
     background-color: var(--bs-purple);
 }
 
-.btn-primary {
-    --bs-btn-bg: var(--bs-yellow);
-    --bs-btn-border-color: var(--bs-yellow);
-    --bs-btn-hover-bg: var(--bs-yellow);
-    --bs-btn-hover-border-color: var(--bs-yellow);
-    --bs-btn-active-bg: var(--bs-yellow);
-    --bs-btn-active-border-color: var(--bs-yellow);
-}
-
-.card {
-    border-radius: 0;
-    --bs-card-border-width: var(0);
-    --bs-card-border-color: var(--bs-purple);
-    --bs-card-border-radius: var(0);
-    --bs-card-bg: var(--bs-purple);
-    --bs-card-color: var(--bs-white);
-}
-
-.card:hover {
-    --bs-card-bg: var(--bs-pink);
-    --bs-card-border-color: var(--bs-pink);
-}
-
-
 .badge {
     color: var(--bs-purple);
     background-color: var(--bs-yellow);
@@ -69,83 +45,12 @@ nav {
     top: calc(50% - 50px);
     left: 50%;
     transform: translate(-50%, -50%);
-    /* padding: 3% 5% 3% 5%; */
     box-sizing: border-box;
 
     background-color: var(--bs-purple);
     color: var(--bs-white);
-
 }
 
-/* .connect {
-    width: 80%;
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 60px;
-} */
-
-/* footer {
-    color: var(--bs-purple);
-    background-color: var(--bs-yellow);
-
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 1rem 0 1rem 0;
-    display: inline-block;
-    overflow-x: hidden;
-} */
-
-div.projects {
-    display: block;
-    width: 100%;
-    /* vertical-align: middle; */
-    text-align: center;
-
-}
-
-/* .projects a {
-    text-decoration: none;
-
-    padding-right: .5rem !important;
-    padding-left: .5rem !important;
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-
-    color: var(--bs-purple);
-    background-color: var(--bs-yellow);
-
-    border-radius: 4px;
-    border-width: 4px;
-    border-style: solid;
-    border-color: var(--bs-purple);
-}
-
-.projects a:hover {
-    color: var(--bs-yellow);
-    background-color: var(--bs-purple);
-} */
-
-/* a {
-    text-decoration: none;
-
-color: var(--bs-yellow);
-background-color: var(--bs-purple);
-
-border-radius: 4px;
-border-width: 4px;
-border-style: solid;
-border-color: var(--bs-yellow);
-}
-
-a:hover {
-    color: var(--bs-purple);
-    background-color: var(--bs-yellow);
-}
-
-*/
 /* footer */
 
 .footer {
