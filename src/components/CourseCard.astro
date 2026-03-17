@@ -1,0 +1,19 @@
+---
+const { href, title, description, tech = [] } = Astro.props;
+---
+
+<a class="course" href={href}>
+    <h2>{title}</h2>
+    <p>{description}</p>
+
+    {
+        tech.length > 0 && (
+            <>
+                <h5>Technologies used</h5>
+                {tech.map((t) => (
+                    <span class="badge">{t}</span>
+                ))}
+            </>
+        )
+    }
+</a>

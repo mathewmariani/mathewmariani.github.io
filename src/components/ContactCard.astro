@@ -1,0 +1,14 @@
+---
+const { email, github, linkedin } = Astro.props;
+---
+
+<section class="contact">
+    <h4>Contact Information</h4>
+    <div class="vstack gap-2">
+        <a href={`mailto:${email}`}>{email}</a>
+        <a href={`https://github.com/${github}`}>@{github}</a>
+        <a href={`https://linkedin.com/in/${linkedin}`}>
+            in/{linkedin}
+        </a>
+    </div>
+</section>

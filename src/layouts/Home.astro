@@ -1,0 +1,17 @@
+---
+import Meta from '@/components/Meta.astro';
+---
+
+<html lang="en">
+    <head>
+        <Meta />
+    </head>
+
+    <body>
+        <main class="container py-3">
+            <slot />
+        </main>
+        <script src="/sugar.js" is:inline></script>
+    </body>
+</html>
+<style></style>

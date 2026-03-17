@@ -1,5 +1,5 @@
 ---
-import Layout from '@/layouts/Page.astro';
+import Home from '@/layouts/Home.astro';
 
 import {
 	ProjectsLink,
@@ -10,23 +10,22 @@ import {
 } from '../consts';
 ---
 
-<Layout>
-	<h1 class="display-2"><b>Hey, I'm Mathew 👋</b></h1>
-	<div class="highlight"></div>
-	<article>
-		<p class="fs-5">
+<Home>
+	<div class="title-card px-3 py-3">
+		<h1>Hi, I'm Mathew.</h1>
+		<p class="lead">
 			I am a versatile professional with a strong background in software
 			development, having worked in backend-services and artificial
 			intelligence systems. As an avid hobbyist, I'm constantly tinkering
 			with projects to broaden my skillset, and keep my approach fresh.
 		</p>
-		<p class="fs-5">
+		<!-- <p class="lead">
 			Beyond software development, I teach programming courses while also
 			serving as the head coach of a varsity rugby program. These roles
 			let me contribute to my community, stay engaged in education, and
 			further develop my soft skills.
-		</p>
-		<p class="fs-5">
+		</p> -->
+		<p class="lead">
 			My previous experiences includes Software Developer @ <a
 				href={UbisoftMontreal()}
 				class="alert-link">Ubisoft Montreal</a
@@ -35,10 +34,14 @@ import {
 				class="alert-link">Stockholm Syndrome.AI</a
 			>. Want the full picture?
 		</p>
-		<ul class="list">
-			<li><a href={ResumeLink()} class="alert-link">Resume</a></li>
-			<li><a href={ProjectsLink()} class="alert-link">Projects</a></li>
-			<li><a href={CoursesLink()} class="alert-link">Courses</a></li>
-		</ul>
-	</article>
-</Layout>
+		<section class="connect">
+			<div class="vstack gap-2">
+				<a href={ProjectsLink()}>Projects</a>
+				<a href={ResumeLink()}>Resume</a>
+				<a href={CoursesLink()}>Courses</a>
+			</div>
+		</section>
+	</div>
+</Home>
+
+<style></style>

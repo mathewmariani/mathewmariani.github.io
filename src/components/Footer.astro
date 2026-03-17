@@ -1,10 +1,23 @@
 ---
+import { ProjectsLink, ResumeLink, CoursesLink } from '../consts';
 
+const path = Astro.url.pathname;
+
+const links = [
+    { href: ResumeLink(), label: 'Resume' },
+    { href: ProjectsLink(), label: 'Projects' },
+    { href: CoursesLink(), label: 'Courses' },
+];
 ---
 
-<footer>
-    <hr />
-    <p class="text-center text-mutes">
-        Made with <span id="with-love">❤️</span> in Montréal.
-    </p>
-</footer>
+<section class="footer">
+    <div class="container">
+        <div class="vstack gap-2">
+            {
+                links
+                    .filter((link) => link.href !== path)
+                    .map((link) => <a href={link.href}>{link.label}</a>)
+            }
+        </div>
+    </div>
+</section>
