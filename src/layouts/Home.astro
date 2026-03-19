@@ -1,4 +1,6 @@
 ---
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
 import Meta from '@/components/Meta.astro';
 ---
 
@@ -8,9 +10,13 @@ import Meta from '@/components/Meta.astro';
     </head>
 
     <body>
-        <main class="container py-3">
-            <slot />
+        <Header />
+        <main>
+            <div class="container">
+                <slot />
+            </div>
         </main>
+        <Footer />
         <script src="/sugar.js" is:inline></script>
     </body>
 </html>
