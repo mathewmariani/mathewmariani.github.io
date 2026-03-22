@@ -5,16 +5,17 @@ const { email, github, linkedin } = Astro.props;
 <h1>Contact Information</h1>
 <div class="vstack gap-2">
     <a class="list-item list-item-navigation" href={`mailto:${email}`}
-        >{email}</a
+        ><i class="bi bi-envelope"></i> {email}</a
     >
     <a
         class="list-item list-item-navigation"
-        href={`https://github.com/${github}`}>@{github}</a
+        href={`https://github.com/${github}`}
+        ><i class="bi bi-github"></i> @{github}</a
     >
     <a
         class="list-item list-item-navigation"
         href={`https://linkedin.com/in/${linkedin}`}
     >
-        in/{linkedin}
+        <i class="bi bi-linkedin"></i> in/{linkedin}
     </a>
 </div>
