@@ -2,6 +2,9 @@
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import Meta from '@/components/Meta.astro';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@mathewmariani/sugar/css/sugar.css';
 ---
 
 <html lang="en">
@@ -17,7 +20,8 @@ import Meta from '@/components/Meta.astro';
 			</div>
 		</main>
 		<Footer />
-		<script src="/sugar.js" is:inline></script>
+		<script>
+			import '@mathewmariani/sugar/js/sugar.js';
+		</script>
 	</body>
 </html>
-<style></style>
