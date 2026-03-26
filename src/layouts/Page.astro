@@ -1,12 +1,21 @@
 ---
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
+import { ProjectsLink, ResumeLink, CoursesLink } from '../consts';
+
+import Footer from '@mathewmariani/sugar/astro/components/Footer.astro';
+import Header from '@mathewmariani/sugar/astro/components/Header.astro';
+
 import Meta from '@/components/Meta.astro';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@mathewmariani/sugar/css/sugar.css';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
+
+const links = [
+	{ href: ResumeLink(), label: 'Resume' },
+	{ href: ProjectsLink(), label: 'Projects' },
+	{ href: CoursesLink(), label: 'Courses' },
+];
 ---
 
 <html lang="en">
@@ -21,7 +30,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 				<slot />
 			</div>
 		</main>
-		<Footer />
+		<Footer links={links} />
+
 		<script>
 			import '@mathewmariani/sugar/js/sugar.js';
 		</script>
