@@ -1,5 +1,10 @@
 ---
-import { ProjectsLink, ResumeLink, CoursesLink } from '../consts';
+import {
+	ProjectsLink,
+	ResumeLink,
+	CoursesLink,
+	AssemblerLink,
+} from '../consts';
 
 import Footer from '@mathewmariani/sugar/astro/components/Footer.astro';
 import Header from '@mathewmariani/sugar/astro/components/Header.astro';
@@ -15,6 +20,7 @@ const links = [
 	{ href: ResumeLink(), label: 'Resume' },
 	{ href: ProjectsLink(), label: 'Projects' },
 	{ href: CoursesLink(), label: 'Courses' },
+	{ href: AssemblerLink(), label: 'Assemblers & Simulators' },
 ];
 ---
 

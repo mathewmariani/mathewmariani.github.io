@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Page.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+const assemblers = [
+    {
+        href: 'https://mathewmariani.com/mango-assembler-simulator',
+        title: 'Mango',
+        description:
+            'A simulator with a simplified assembler syntax implemented in TypeScript, using VueJS.',
+        tech: ['TypeScript', 'Vite', 'VueJS', 'Assembly'],
+    },
+    {
+        href: 'https://mathewmariani.com/marie-simulator',
+        title: 'Marie',
+        description:
+            'Assembler and Simulator written in Javascript using VueJS.',
+        tech: ['Javascript', 'VueJS'],
+    },
+];
+---
+
+<Layout>
+    <div class="vstack gap-3">
+        <h1>
+            Experiements with assemblers and simulators using web technologies.
+        </h1>
+        {assemblers.map((assembler) => <ProjectCard {...assembler} />)}
+    </div>
+</Layout>
