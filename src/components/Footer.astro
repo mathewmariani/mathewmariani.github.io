@@ -1,5 +1,11 @@
 ---
-import { ProjectsLink, ResumeLink, CoursesLink } from '../consts';
+import {
+    ProjectsLink,
+    ResumeLink,
+    CoursesLink,
+    SimulatorsLink,
+    GamesLink,
+} from '../consts';
 
 const path = Astro.url.pathname;
 
@@ -7,6 +13,8 @@ const links = [
     { href: ResumeLink(), label: 'Resume' },
     { href: ProjectsLink(), label: 'Projects' },
     { href: CoursesLink(), label: 'Courses' },
+    { href: SimulatorsLink(), label: 'Simulators' },
+    { href: GamesLink(), label: 'Games' },
 ];
 ---
 

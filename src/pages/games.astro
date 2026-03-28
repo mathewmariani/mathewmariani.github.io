@@ -1,0 +1,27 @@
+---
+import Layout from '@/layouts/Page.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+const games = [
+    {
+        href: '/pti-projects/projects/coinrush',
+        title: 'Coin Rush',
+        description:
+            'A simple coin collection game built using `pti.h` in C++.',
+        tech: ['C++', 'WebAssembly'],
+    },
+    {
+        href: '/cel8-samples/samples/tetris',
+        title: 'Tetris',
+        description: 'Classic tetris built using `cel8.h` in C99.',
+        tech: ['C99', 'WebAssembly'],
+    },
+];
+---
+
+<Layout>
+    <div class="vstack gap-3">
+        <h1>Small games I have built over time.</h1>
+        {games.map((game) => <ProjectCard {...game} />)}
+    </div>
+</Layout>
